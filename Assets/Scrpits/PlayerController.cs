@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -15,7 +16,7 @@ public class PlayerStatus
     public float moveTo;
     public bool canMove, isMoving, isGround, isCrouch, isFalling, isWall, doubleJump;
     [Range(-100f, 100f)]
-    public float attack, defence, resist, breath;
+    public float attack, defence, resist, breath, WeaponCooldown;
 }
 [System.Serializable]
 public class CacheMove
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
         cacheMove.rb = GetComponent<Rigidbody2D>();
         cacheMove.bc = GetComponent<BoxCollider2D>();
         sI.WeaponScriptR = GetComponentInChildren<WeaponRange>();
-        sI.WeaponScriptM = GetComponent<WeaponMelee>();
+        sI.WeaponScriptM = FindObjectOfType<WeaponMelee>();
     }
     void Start()
     {
@@ -54,6 +55,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (playerStatus.WeaponCooldown < 5f)
+            playerStatus.WeaponCooldown += Time.deltaTime;
         if (fIsGround())
         {
             playerStatus.canMove = true;
@@ -72,14 +75,36 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && playerStatus.WeaponCooldown>1f)
         {
-            sI.WeaponScriptR.Shoot();
+            attack();
         }
+        //flip Sprite
+        if (cacheMove.rb.velocity.x < 0)
+            transform.rotation = new Quaternion(0, 180, 0, 0);//SpritePlayer.flipX = true;
+        else
+            if (cacheMove.rb.velocity.x > 0)
+            transform.rotation = new Quaternion(0, 0, 0, 0); //SpritePlayer.flipX = false;
     }
     // ##### end Bases ##### //
 
     // ##### Precedure ##### //
+    void attack()
+    {
+        if (WeaponSwith.SelectedWeapon == 0)
+        {
+            sI.WeaponScriptR.Shoot();
+            playerStatus.WeaponCooldown = 0.5f;
+            return;
+        }
+        if (WeaponSwith.SelectedWeapon == 0.75f)
+        {
+            sI.WeaponScriptM.MeleeAttack();
+            playerStatus.WeaponCooldown = 1;
+            return;
+        }
+        playerStatus.WeaponCooldown = 0;
+    }
     void GetAxis()
     {
         playerStatus.moveTo = Input.GetAxis("Horizontal") * playerStatus.speed;

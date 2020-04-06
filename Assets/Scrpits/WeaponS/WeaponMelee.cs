@@ -20,7 +20,7 @@ public class WeaponMelee : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, meleeRange, enemyLayer);
         foreach (Collider2D enemy in hitEnemies)
         {
-            
+            Debug.Log("Melee Hit in:"+ enemy.name);
         }
     }
     private void OnDrawGizmos()

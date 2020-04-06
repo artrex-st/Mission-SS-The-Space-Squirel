@@ -27,6 +27,14 @@ public class WeaponSwith : MonoBehaviour
             else
                 SelectedWeapon--;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SelectedWeapon = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SelectedWeapon = 1;
+        }
         if (previusWeapon != SelectedWeapon)
         {
             SelectWeapons();

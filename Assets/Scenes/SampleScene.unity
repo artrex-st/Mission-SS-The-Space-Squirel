@@ -546,7 +546,7 @@ MonoBehaviour:
   meleeRange: 0.89
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!1 &879495677
 GameObject:
   m_ObjectHideFlags: 0
