@@ -79,6 +79,23 @@ public class PlayerController : MonoBehaviour
         {
             attack();
         }
+        // End Jump
+        // crouch
+        if (Input.GetButtonDown("Fire3"))
+        {
+            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x,cacheMove.bc.size.y/2f);
+            cacheMove.bc.offset = new Vector2(0, -0.25f);
+            playerStatus.isCrouch = true;
+        }
+        if (Input.GetButtonUp("Fire3"))
+        {
+            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y*2);
+            cacheMove.bc.offset = new Vector2(0, 0);
+            playerStatus.isCrouch = false;
+        }
+        // end crouch
+
+
         //flip Sprite
         if (cacheMove.rb.velocity.x < 0)
             transform.rotation = new Quaternion(0, 180, 0, 0);//SpritePlayer.flipX = true;
@@ -127,7 +144,6 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionStay2D(Collision2D coll)
     {
         //if (coll.gameObject.name.Equals("Ground"))
-            //Debug.Log("Grounded");
 
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -139,7 +155,11 @@ public class PlayerController : MonoBehaviour
     // ##### Functions ##### //
     private bool fIsGround()
     {
-        return Physics2D.OverlapBox(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x - 0.3f, cacheMove.bc.size.y+0.03f), 0, cacheMove.layer, 0, 0.1f);
+        if (playerStatus.isCrouch)
+        {
+            return Physics2D.OverlapBox(new Vector2(cacheMove.bc.transform.position.x, cacheMove.bc.transform.position.y- (cacheMove.bc.size.y / 2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f), 0, cacheMove.layer, 0, 0.1f);
+        }else
+            return Physics2D.OverlapBox(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y*1.01f), 0, cacheMove.layer, 0, 0.1f);
         //return Physics2D.BoxCast(new Vector2(transform.localPosition.x, transform.localPosition.y), new Vector2(BodySize.size.x * 0.4f, BodySize.size.y * 0.9f), 0, Vector2.down, 0.1f, GroundLayer);
     }
     // ##### end Functions ##### //
@@ -148,7 +168,12 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x - 0.1f, cacheMove.bc.size.y+0.01f));
+        if (playerStatus.isCrouch)
+        {
+            Gizmos.DrawWireCube(new Vector2(cacheMove.bc.transform.position.x,cacheMove.bc.transform.position.y - (cacheMove.bc.size.y/2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f));
+        }
+        else
+            Gizmos.DrawWireCube(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f));
 
     }
 }
