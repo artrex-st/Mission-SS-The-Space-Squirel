@@ -11,10 +11,10 @@ public class PlayerStatus
 {
     public float maxHP, currHP;
     [Range(0f, 50f)]
-    public float speed = 10, jumpForce = 20, gravity = 2;
+    public float speed = 10, jumpForce = 20, gravity = 2, fuel=50, flyForce=40f;
     [Range(-30f,30f)]
     public float moveTo;
-    public bool canMove, isMoving, isGround, isCrouch, isFalling, isWall, doubleJump;
+    public bool canMove, isMoving, isGround, isCrouch, isFalling, isWall, fly;
     [Range(-100f, 100f)]
     public float attack, defence, resist, breath, WeaponCooldown;
 }
@@ -60,26 +60,32 @@ public class PlayerController : MonoBehaviour
         if (fIsGround())
         {
             playerStatus.canMove = true;
-            playerStatus.doubleJump = true;
+            playerStatus.fly = true;
         }
         else
             playerStatus.canMove = false;
         //
         GetAxis();
-        if(playerStatus.canMove)
+        if(playerStatus.canMove || playerStatus.fly)
             cacheMove.rb.velocity = new Vector2(playerStatus.moveTo,cacheMove.rb.velocity.y);
-        //jump
+
+        //jump / fly
         if (Input.GetButtonDown("Jump") && fIsGround())
             Jump();
-        else if (Input.GetButtonDown("Jump") && playerStatus.doubleJump)
+        if (Input.GetButton("Jump") && playerStatus.fly && !fIsGround())
         {
-            Jump();
+            Fly();
         }
+        else if (playerStatus.fuel<=0)
+        {
+            Debug.LogWarning("Fuel is Empty!");
+        }
+        // End Jump / fly
+
         if (Input.GetButtonDown("Fire1") && playerStatus.WeaponCooldown>1f)
         {
             attack();
         }
-        // End Jump
         // crouch
         if (Input.GetButtonDown("Fire3"))
         {
@@ -128,11 +134,21 @@ public class PlayerController : MonoBehaviour
     }
     void Jump()
     {
-        if (!fIsGround())
+        if (!fIsGround() && playerStatus.fuel<=0)
         {
-            playerStatus.doubleJump = false;
+            playerStatus.fly = false;
         }
         cacheMove.rb.AddForce(new Vector2(0, playerStatus.jumpForce * 10), ForceMode2D.Impulse);
+    }
+    void Fly()
+    {
+        if (!fIsGround() && playerStatus.fuel <= 0)
+        {
+            playerStatus.fly = false;
+        }
+        cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce*25), ForceMode2D.Force);
+        playerStatus.fuel -= 3*Time.deltaTime;
+        Debug.Log("Fuel in:"+playerStatus.fuel);
     }
     // ##### end Procedures ##### //
 
