@@ -482,6 +482,11 @@ MonoBehaviour:
     fuel: 8.3
     flyForce: 4
     moveTo: 0
+    attack: 0
+    defence: 0
+    resist: 0
+    breath: 0
+    WeaponCooldown: 0
     canMove: 0
     isMoving: 0
     isGround: 0
@@ -489,15 +494,10 @@ MonoBehaviour:
     isFalling: 0
     isWall: 0
     fly: 0
-    attack: 0
-    defence: 0
-    resist: 0
-    breath: 0
-    WeaponCooldown: 0
   cacheMove:
     rb: {fileID: 766806182}
     bc: {fileID: 766806183}
-    layer:
+    layerOfGround:
       serializedVersion: 2
       m_Bits: 256
   sI:
