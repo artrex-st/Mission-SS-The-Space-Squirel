@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
@@ -9,33 +10,75 @@ using UnityEngine.SocialPlatforms;
 [System.Serializable]
 public class PlayerStatus
 {
-    public float maxHP, currHP;
-    [Range(0f, 50f)]
-    public float speed = 10, jumpForce = 20, gravity = 2, fuel=50, flyForce=40f;
-    [Range(-30f,30f)]
+    // float
+    [Tooltip("Max Health value.")]
+    public float maxHP;
+    [Tooltip("Current Health value.")]
+    public float currHP;
+    [Range(0f, 50f), Tooltip("Speed of player will moved.")]
+    public float speed = 10;
+    [Range(0f, 50f), Tooltip("The more jumpforce it has, more higher and faster it will go.")]
+    public float jumpForce = 20;
+    [Range(0f, 10f), Tooltip("Building...")]
+    public float gravity = 2;
+    [Range(0f, 100f), Tooltip("How much fuel his has. (need fuel to fly)")]
+    public float fuel = 50;
+    [Range(0f, 50f), Tooltip("The higher is the value, more faster it will goes to up")]
+    public float flyForce = 40f;
+    [Range(-30f,30f), Tooltip("Axis of movement direction.")]
     public float moveTo;
-    public bool canMove, isMoving, isGround, isCrouch, isFalling, isWall, fly;
-    [Range(-100f, 100f)]
-    public float attack, defence, resist, breath, WeaponCooldown;
+    //
+    [Range(-100f, 100f), Tooltip("Building...")]
+    public float attack;
+    [Range(-100f, 100f), Tooltip("Building...")]
+    public float defence;
+    [Range(-100f, 100f), Tooltip("Building...")]
+    public float resist;
+    [Range(-100f, 100f), Tooltip("Building...")]
+    public float breath;
+    [Range(-10f, 10f), Tooltip("Time to use next Attack.")]
+    public float WeaponCooldown;
+    // booleans
+    [Tooltip("Indicate if Player Can Move.")]
+    public bool canMove;
+    [Tooltip("Indicates if Player has moving.")]
+    public bool isMoving;
+    [Tooltip("Indicates if Player has touche the ground layers.")]
+    public bool isGround;
+    [Tooltip("Indicates if Player has Crouch.")]
+    public bool isCrouch;
+    [Tooltip("Indicates if Player has Falling")]
+    public bool isFalling;
+    [Tooltip("Building...")]
+    public bool isWall;
+    [Tooltip("Indicates if Player can Fly.")]
+    public bool fly;
+    
 }
 [System.Serializable]
 public class CacheMove
 {
     public Rigidbody2D rb;
     public BoxCollider2D bc;
-    public LayerMask layer;
+    [Tooltip("Cache of Layer check: Ground. (needed to jump and fly)")]
+    public LayerMask layerOfGround;
 }
 [System.Serializable]
 public class ScriptsImport
 {
+    [Tooltip("Script Of Ranged Weapon.")]
     public WeaponRange WeaponScriptR;
+    [Tooltip("Script Of Melee Weapon.")]
     public WeaponMelee WeaponScriptM;
 }
 
 public class PlayerController : MonoBehaviour
 {
+    [Tooltip("Player Variables and conditions")]
     public PlayerStatus playerStatus;
+    [Tooltip("Player Cache Components")]
     public CacheMove cacheMove;
+    [Tooltip("External Scripts Importations")]
     public ScriptsImport sI;
     [Range(-2f,10f)]
     public float cooldown;
@@ -173,9 +216,9 @@ public class PlayerController : MonoBehaviour
     {
         if (playerStatus.isCrouch)
         {
-            return Physics2D.OverlapBox(new Vector2(cacheMove.bc.transform.position.x, cacheMove.bc.transform.position.y- (cacheMove.bc.size.y / 2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f), 0, cacheMove.layer, 0, 0.1f);
+            return Physics2D.OverlapBox(new Vector2(cacheMove.bc.transform.position.x, cacheMove.bc.transform.position.y- (cacheMove.bc.size.y / 2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f), 0, cacheMove.layerOfGround, 0, 0.1f);
         }else
-            return Physics2D.OverlapBox(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y*1.01f), 0, cacheMove.layer, 0, 0.1f);
+            return Physics2D.OverlapBox(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y*1.01f), 0, cacheMove.layerOfGround, 0, 0.1f);
         //return Physics2D.BoxCast(new Vector2(transform.localPosition.x, transform.localPosition.y), new Vector2(BodySize.size.x * 0.4f, BodySize.size.y * 0.9f), 0, Vector2.down, 0.1f, GroundLayer);
     }
     // ##### end Functions ##### //
