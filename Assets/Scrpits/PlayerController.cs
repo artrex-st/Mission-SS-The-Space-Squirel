@@ -62,6 +62,8 @@ public class CacheMove
     public BoxCollider2D bc;
     [Tooltip("Cache of Layer check: Ground. (needed to jump and fly)")]
     public LayerMask layerOfGround;
+    [Tooltip("Testing (building...)")]
+    public Animator animator;
 }
 [System.Serializable]
 public class ScriptsImport
@@ -80,16 +82,19 @@ public class PlayerController : MonoBehaviour
     public CacheMove cacheMove;
     [Tooltip("External Scripts Importations")]
     public ScriptsImport sI;
-    [Range(-2f,10f)]
+    [Range(-2f, 10f)]
     public float cooldown;
+    private GameObject testeSword;
 
     // ##### Bases ##### //
     private void Awake()
     {
         cacheMove.rb = GetComponent<Rigidbody2D>();
         cacheMove.bc = GetComponent<BoxCollider2D>();
+        cacheMove.animator = GetComponentInChildren<Animator>();
         sI.WeaponScriptR = GetComponentInChildren<WeaponRange>();
         sI.WeaponScriptM = FindObjectOfType<WeaponMelee>();
+        testeSword = GameObject.Find("Sword");
     }
     void Start()
     {
@@ -98,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        WeaponSprite();
         if (playerStatus.WeaponCooldown < 5f)
             playerStatus.WeaponCooldown += Time.deltaTime;
         if (fIsGround())
@@ -109,8 +115,8 @@ public class PlayerController : MonoBehaviour
             playerStatus.canMove = false;
         //
         GetAxis();
-        if(playerStatus.canMove || playerStatus.fly)
-            cacheMove.rb.velocity = new Vector2(playerStatus.moveTo,cacheMove.rb.velocity.y);
+        if (playerStatus.canMove || playerStatus.fly)
+            cacheMove.rb.velocity = new Vector2(playerStatus.moveTo, cacheMove.rb.velocity.y);
 
         //jump / fly
         if (Input.GetButtonDown("Jump") && fIsGround())
@@ -119,26 +125,26 @@ public class PlayerController : MonoBehaviour
         {
             Fly();
         }
-        else if (playerStatus.fuel<=0)
+        else if (Input.GetButton("Jump") && playerStatus.fuel <= 0)
         {
             Debug.LogWarning("Fuel is Empty!");
         }
         // End Jump / fly
 
-        if (Input.GetButtonDown("Fire1") && playerStatus.WeaponCooldown>1f)
+        if (Input.GetButtonDown("Fire1") && playerStatus.WeaponCooldown > 1f)
         {
             attack();
         }
         // crouch
         if (Input.GetButtonDown("Fire3"))
         {
-            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x,cacheMove.bc.size.y/2f);
+            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y / 2f);
             cacheMove.bc.offset = new Vector2(0, -0.25f);
             playerStatus.isCrouch = true;
         }
         if (Input.GetButtonUp("Fire3"))
         {
-            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y*2);
+            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y * 2);
             cacheMove.bc.offset = new Vector2(0, 0);
             playerStatus.isCrouch = false;
         }
@@ -157,19 +163,17 @@ public class PlayerController : MonoBehaviour
     // ##### Precedure ##### //
     void attack()
     {
-        if (WeaponSwith.SelectedWeapon == 0)
+        if (WeaponSwith.SelectedWeapon == 0) // weapon selected
         {
             sI.WeaponScriptR.Shoot();
             playerStatus.WeaponCooldown = 0.5f;
-            return;
         }
-        if (WeaponSwith.SelectedWeapon == 0.75f)
+        if (WeaponSwith.SelectedWeapon == 1) // weapon selected
         {
+            cacheMove.animator.SetTrigger("Attack");
             sI.WeaponScriptM.MeleeAttack();
-            playerStatus.WeaponCooldown = 1;
-            return;
+            playerStatus.WeaponCooldown = 0.7f;
         }
-        playerStatus.WeaponCooldown = 0;
     }
     void GetAxis()
     {
@@ -177,7 +181,7 @@ public class PlayerController : MonoBehaviour
     }
     void Jump()
     {
-        if (!fIsGround() && playerStatus.fuel<=0)
+        if (!fIsGround() && playerStatus.fuel <= 0)
         {
             playerStatus.fly = false;
         }
@@ -189,9 +193,16 @@ public class PlayerController : MonoBehaviour
         {
             playerStatus.fly = false;
         }
-        cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce*25), ForceMode2D.Force);
-        playerStatus.fuel -= 3*Time.deltaTime;
-        Debug.Log("Fuel in:"+playerStatus.fuel);
+        cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
+        playerStatus.fuel -= 3 * Time.deltaTime;
+        Debug.Log("Fuel in:" + playerStatus.fuel);
+    }
+    void WeaponSprite()
+    {
+        if (WeaponSwith.SelectedWeapon==1)
+            testeSword.SetActive(true);
+        else
+            testeSword.SetActive(false);
     }
     // ##### end Procedures ##### //
 

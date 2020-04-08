@@ -29,7 +29,5 @@ public class WeaponMelee : MonoBehaviour
             return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, meleeRange);
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(new Vector2(transform.position.x, transform.position.y), meleeRange);
     }
 }
