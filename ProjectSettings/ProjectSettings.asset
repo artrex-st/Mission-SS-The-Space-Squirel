@@ -623,6 +623,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -636,10 +637,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: b5599925-9d17-4b17-b5ba-0006ed108592
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: New Unity Project
+  organizationId: arthur-2930717
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

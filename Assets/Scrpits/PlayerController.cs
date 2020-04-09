@@ -167,12 +167,14 @@ public class PlayerController : MonoBehaviour
         {
             sI.WeaponScriptR.Shoot();
             playerStatus.WeaponCooldown = 0.5f;
+            return;
         }
         if (WeaponSwith.SelectedWeapon == 1) // weapon selected
         {
             cacheMove.animator.SetTrigger("Attack");
             sI.WeaponScriptM.MeleeAttack();
             playerStatus.WeaponCooldown = 0.7f;
+            return;
         }
     }
     void GetAxis()
