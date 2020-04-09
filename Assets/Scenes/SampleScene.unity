@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 766806184}
   - component: {fileID: 766806183}
   - component: {fileID: 766806182}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -941,7 +941,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 5
-  m_LinearDrag: 0
+  m_LinearDrag: 0.6
   m_AngularDrag: 0.05
   m_GravityScale: 3
   m_Material: {fileID: 0}
@@ -1866,7 +1866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924623829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.05, y: 5.36, z: 0}
+  m_LocalPosition: {x: 2.44, y: 6.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1931,9 +1931,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5183ed8bff5f840b17fbbbf5fd9230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {x: 0, y: 0}
+  spawnEnemy: {x: 0, y: 0}
   speed: 13
   nextWaypointDistance: 1
+  sacanRange: 4.66
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  teste: []
 --- !u!114 &1924623836
 MonoBehaviour:
   m_ObjectHideFlags: 0

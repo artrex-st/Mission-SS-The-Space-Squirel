@@ -5,27 +5,32 @@ using Pathfinding;
 
 public class FlyEnemy : MonoBehaviour
 {
-    public Transform target;
+    public Vector2 target,spawnEnemy;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
+    public float sacanRange=5;
+    public LayerMask targetLayer;
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
     Seeker seeker;
     Rigidbody2D rb;
+    public Collider2D[] teste;
 
     void Start()
     {
-        target = GameObject.FindWithTag("Player").transform;
+        spawnEnemy = transform.position;
+        target = GameObject.FindWithTag("Player").transform.position;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, 0.3f);
+        InvokeRepeating("RangeScan", 0f, 1f);
     }
     void UpdatePath()
     {
         if (seeker.IsDone())
         {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, target, OnPathComplete);
         }
     }
     void FixedUpdate()
@@ -59,5 +64,31 @@ public class FlyEnemy : MonoBehaviour
             path = p;
             currentWaypoint = 0;
         }
+    }
+    public void RangeScan()
+    {
+        Collider2D[] picTarget = Physics2D.OverlapCircleAll(transform.position, sacanRange, targetLayer);
+        teste = Physics2D.OverlapCircleAll(transform.position, sacanRange);
+        if (picTarget.Length <=0)
+        {
+            Debug.Log("Scan not found target. back to respaw point");
+            target = spawnEnemy;
+        }
+        else
+        {
+            foreach (Collider2D targetOnRange in picTarget)
+            {
+                Debug.Log("Scan Result is:" + targetOnRange.name+" Start hunt!");
+                target = targetOnRange.transform.position; //use the transform in this range to target
+            }   
+        }
+
+    }
+    private void OnDrawGizmos()
+    {
+        if (transform.position == null)
+            return;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, sacanRange);
     }
 }
