@@ -1,0 +1,13 @@
+No momento temos ponto inico e o final.
+
+ 1- A imagem do espinho e o inimigo onde da hit kill.
+ 2- As 3 pedras seria elas cairem uma de cada vez onde o player tera que desviar
+em quanto ele desce(fazer um random não precisa ser na orem...). 
+ 3- As 3 Plataforma elas teria que fazer animação para descer e subir fazendo player
+espera para que posso pular lenas(se der fazer elas sumirem e aparecer para dificultar mais ainda a subida).
+
+
+
+Algumas ideias que estou pensando:
+Sim, ter uma fase bônus, ter uma area secreta para contar alguma coisa ou pegar algo.
+Fazer uma máquina de laser para dar dano no player
