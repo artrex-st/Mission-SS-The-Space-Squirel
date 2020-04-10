@@ -368,7 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACwn+vBhI/ShgIAAC4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMuSmzAQ/BWXzjHFwwaTW4K93hz2Ueuk9sJFIGFUBomSxNreLf97RkI2xDkhumdGPT0DX4hx1dFSC7mVjDwJQtH3GTJn9G02ko/0hPeC79gnvca8M6JrE4RtzBvWTAAemDQlWqolK3/wfWOCfQB7zioh2w3Z00worQCucKMoUFJok80B+pqhEzzmqUk5wylMzOkTTqk/u8CxpFxTOYaG3jJZpOlqFbuM2AuSNE2jOHKJgbdaBMkqjjdzP7E1el42uO0oMQ2NpVIvjCEzXbpKQehFsU3g0LSLDTzfFC5F0zDlRCN97qwpGe5UDy1DAGEYTLBKQy9YAFJTtq+1eZ/mv1SVotqZJPF5zSTYORRGP8XgcYvVYdD5gZveXBUuB2VD0af/+Hlg6UqK9vF6b+CbO3TNysMbPpdY6ckQpvB61B5Yu464OeCioe815c9iK0XPCZBa9ia1VzRcj6+31rKalocRH6TegX03+n+deeAlq1UQpXFkJuamaBq6WCtOWcPawsR7iwHYNcL6b7eGShjWL1Bvd0q5uoAaSX8U/Y330+VzxAOTSgPlWuZGayF6aULRxhpoWut1JiSnFnYddJTjRp9foYy+n+cdN7n2jnnA5jNzlzvu+vXcpVh4jPf9O+pVHG+TU7U4PlFVv/S6YZyOog3xDD5lgvNh3aaeXNN2vaxwOdWw7xn5d9FQVIYk8uMyDaowDnA8T4plGpKCxMXC9xdxgewmMg6N4uZ1UOr8gbHxURSHrbv+fmZbiTu7+0Ti45Z9tmLiOeOV2JWSUv4yVLgppxIugS+VbAgDh3ZUa8btwNFXjhpRHijJb4Vy2+rmpCXOxyo56tiH0AbJUWb/Nzm6oMtfUEsDBBQAAAgIAACwn+sLnmzJbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSScbJRirGBWbKlYZqRmWGima55kqmlUUpSilmSiYGBiVmSUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACwn+vBhI/ShgIAAC4FAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACwn+sLnmzJbQAAAHgAAAAJACQAAAAAAAAAAAAAANMCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAiwMAAAAA
+    dataString: UEsDBBQAAAgIAACwn+sRLrqkgwIAACsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMmSmzAQ/RWXzjHFYoPJLcEeTw6z1DipuXARSBiVQaIkMbZnyv+elpANcU5Ir7fXr1t8IcZVR0st5FYy8iQIRd9nyJzRt9lofKQnvBd8xz7p1eedEV0bJ2x93rBmAvDAhCnRUi1Z+YPvG+PsA9hzVgnZbsieZkJpBXCFG0XBJIU20Rygrxk6wWeempAznMLEnD7hlPqzCxxLyjWVo2voLZNFmq5WsYuIvSBJ0zSKIxcYeKtFkKzieDP3E5uj52WD244S09CYKvXCGCLTpcsUhF4U2wAOTTvfwPNN4lI0DVOONNLnzoqS4U710DI4EIZBBMs0hGtN2b7W7nILfqkqRbVTSOLzmknQcsiKfopB4Barw0DyAze9qRMuB1pD0qf/7PPAmisp2sdr3cA3NXTNysMbPpdY6ckEpvB6JB5YrY64OeCioe815c9iK0XPCRi17E1or2i4Hq+31rKalocRH6jegX03in8deOAlq1UQpXFkxuVGaBq6WClOWcPawvh7iwHYNcKKb1eGSpjUL2BvF0q5vIAaSn8U/Y33081zhgcmlQaTa5kbroXopXFFGyugaa3XmZCcWth10FGOG31+hTT6fp53tknZO8sDNm/MFXe269O5C7Hw6O/7d6ZXcbxNTtXi+ERV/dLrhnE6kjaGZ9ApE5wP6zbV5Bq262WFyymHfc/Iv4uGojIkkR+XaVCFcYDjeVIs05AUJC4Wvr+IC2Q3kXFoFDevA1OnD4yNj6Q4bN313zPbStzZ3ScSH7fssxUTzRmvxK6UlPKXIcONOZVQBJ4p2RAGCu2o1ozbgaOvHDWiPFCS3xLlttXNSUucj1ly1LEPoQ2So8z+bHJ0QZe/UEsDBBQAAAgIAACwn+sLnmzJbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSScbJRirGBWbKlYZqRmWGima55kqmlUUpSilmSiYGBiVmSUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACwn+sRLrqkgwIAACsFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACwn+sLnmzJbQAAAHgAAAAJACQAAAAAAAAAAAAAANACAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAiAMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -440,7 +440,7 @@ MonoBehaviour:
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
-  showGraphs: 0
+  showGraphs: 1
 --- !u!4 &237948329
 Transform:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528828979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.6628, y: 6.485, z: 0}
+  m_LocalPosition: {x: 8.48, y: 6.485, z: 0}
   m_LocalScale: {x: -0.88653797, y: 13.133261, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1033,7 +1033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766806181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2, y: 4.04, z: 0}
+  m_LocalPosition: {x: -5.69, y: 3.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 990130558}
@@ -1474,8 +1474,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166420771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.59, y: 2.56, z: 0}
-  m_LocalScale: {x: 1.958387, y: 0.9042824, z: 0.785}
+  m_LocalPosition: {x: 2.555, y: 2.56, z: 0}
+  m_LocalScale: {x: 2.953091, y: 0.9042824, z: 0.785}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1847,7 +1847,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bac80fbaf11b0c6429adba0c8cd7c983, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec9a99bdd0d871d40a2e347553b6815a, type: 3}
   m_Color: {r: 1, g: 0.18396229, b: 0.18396229, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1872,8 +1872,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1924623832
-BoxCollider2D:
+--- !u!58 &1924623832
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1886,18 +1886,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!50 &1924623833
 Rigidbody2D:
   serializedVersion: 4
@@ -1911,7 +1901,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 1.81
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1931,11 +1921,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5183ed8bff5f840b17fbbbf5fd9230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0}
-  spawnEnemy: {x: 0, y: 0}
-  speed: 13
-  nextWaypointDistance: 1
-  sacanRange: 4.66
+  target: {x: 2.44, y: 6.16}
+  spawnEnemy: {x: 2.44, y: 6.16}
+  speed: 20.5
+  nextWaypointDistance: 0.61
+  sacanRange: 4
   targetLayer:
     serializedVersion: 2
     m_Bits: 1024

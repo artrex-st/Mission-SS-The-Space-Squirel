@@ -136,13 +136,13 @@ public class PlayerController : MonoBehaviour
             attack();
         }
         // crouch
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y / 2f);
             cacheMove.bc.offset = new Vector2(0, -0.25f);
             playerStatus.isCrouch = true;
         }
-        if (Input.GetButtonUp("Fire3"))
+        if (Input.GetKeyUp(KeyCode.S))
         {
             cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y * 2);
             cacheMove.bc.offset = new Vector2(0, 0);

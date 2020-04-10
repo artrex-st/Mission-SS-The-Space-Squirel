@@ -12,7 +12,7 @@ public class FlyEnemy : MonoBehaviour
     public LayerMask targetLayer;
     Path path;
     int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    //bool reachedEndOfPath = false;
     Seeker seeker;
     Rigidbody2D rb;
     public Collider2D[] teste;
@@ -23,7 +23,7 @@ public class FlyEnemy : MonoBehaviour
         target = GameObject.FindWithTag("Player").transform.position;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        InvokeRepeating("UpdatePath", 0f, 0.3f);
+        InvokeRepeating("UpdatePath", 0f, 0.2f);
         InvokeRepeating("RangeScan", 0f, 1f);
     }
     void UpdatePath()
@@ -41,12 +41,14 @@ public class FlyEnemy : MonoBehaviour
         }
         if (currentWaypoint >= path.vectorPath.Count)
         {
-            reachedEndOfPath = true;
+            //reachedEndOfPath = true;
+            rb.gravityScale = 0;
             return;
         }
         else
         {
-            reachedEndOfPath = false;
+            //reachedEndOfPath = false;
+            rb.gravityScale = 1;
         }
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed;
