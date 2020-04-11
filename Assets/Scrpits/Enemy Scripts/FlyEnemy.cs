@@ -8,7 +8,7 @@ public class FlyEnemy : MonoBehaviour
     public Vector2 target,spawnEnemy;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
-    public float sacanRange=5;
+    public float scanRange=5;
     public LayerMask targetLayer;
     Path path;
     int currentWaypoint = 0;
@@ -69,8 +69,8 @@ public class FlyEnemy : MonoBehaviour
     }
     public void RangeScan()
     {
-        Collider2D[] picTarget = Physics2D.OverlapCircleAll(transform.position, sacanRange, targetLayer);
-        teste = Physics2D.OverlapCircleAll(transform.position, sacanRange);
+        Collider2D[] picTarget = Physics2D.OverlapCircleAll(transform.position, scanRange, targetLayer);
+        teste = Physics2D.OverlapCircleAll(transform.position, scanRange);
         if (picTarget.Length <=0)
         {
             Debug.Log("Scan not found target. back to respaw point");
@@ -91,6 +91,6 @@ public class FlyEnemy : MonoBehaviour
         if (transform.position == null)
             return;
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, sacanRange);
+        Gizmos.DrawWireSphere(transform.position, scanRange);
     }
 }

@@ -7,8 +7,15 @@ public class WeaponRange : MonoBehaviour
     public Transform FirePoint;
     public GameObject[] Bullet; // more that one bullet type
 
+    private void Awake()
+    {
+        if (FirePoint==null)
+        {
+            FirePoint = transform;
+        }
+    }
     public void Shoot()
     {
-        Instantiate(Bullet[0]/* Tipy of bullety */, FirePoint.position, FirePoint.rotation);
+        Instantiate(Bullet[0]/* Type of bullety */, FirePoint.position, FirePoint.rotation);
     }
 }
