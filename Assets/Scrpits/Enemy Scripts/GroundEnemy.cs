@@ -16,6 +16,7 @@ public class EnemyGround
 public class CacheEnemyGround
 {
     public Rigidbody2D rb;
+    public BoxCollider2D bC;
     public LayerMask layerTarget;
     public Vector3 HuntingPosition;
     [Tooltip("Script Of Ranged Weapon.")]
@@ -29,12 +30,13 @@ public class GroundEnemy : MonoBehaviour
 {
     public EnemyGround enemy;
     public CacheEnemyGround cacheEnemy;
-    public Collider2D[] teste;
+    //public Collider2D[] teste;
     public float CD;
 
     private void Awake()
     {
         cacheEnemy.rb = GetComponentInChildren<Rigidbody2D>();
+        cacheEnemy.bC = GetComponentInChildren<BoxCollider2D>();
         cacheEnemy.layerTarget = LayerMask.GetMask("Player");
         InvokeRepeating("RangeScan", 0f, 0.5f); // RE-Scan area
     }
@@ -44,19 +46,24 @@ public class GroundEnemy : MonoBehaviour
     }
     private void Update()
     {
-        CD += Time.deltaTime;
-        if (enemy.Hunt)
-        {
-            cacheEnemy.rb.transform.position = cacheEnemy.HuntingPosition;
-            Invoke("fire", 0.3f);
-        }else
-            cacheEnemy.rb.transform.position = new Vector3(cacheEnemy.HuntingPosition.x, cacheEnemy.HuntingPosition.y - 0.5f);
+        GrondIn(enemy.Hunt);
     }
-    IEnumerator WaitAseconds()
+    public void RangeScan()
     {
-        //invoke with StartCoroutine("WaitAseconds");
-        yield return new WaitForSeconds(1f);
-        cacheEnemy.WeaponScriptR.Shoot();
+        Collider2D[] picTarget = Physics2D.OverlapBoxAll(cacheEnemy.rb.transform.position, enemy.scanRange, 0, cacheEnemy.layerTarget);
+        if (picTarget.Length <= 0)
+            enemy.Hunt = false;
+        else
+        {
+            foreach (Collider2D targetOnRange in picTarget)
+            {
+                enemy.Hunt = true;
+                if (targetOnRange.transform.position.x < cacheEnemy.rb.position.x)
+                    cacheEnemy.rb.transform.rotation = new Quaternion(0,180f,0,0);
+                else
+                    cacheEnemy.rb.transform.rotation = new Quaternion(0, 0, 0, 0);
+            }
+        }
     }
     void fire()
     {
@@ -66,33 +73,21 @@ public class GroundEnemy : MonoBehaviour
             CD = 0;
         }
     }
-
-    // Range of hunt
-    public void RangeScan()
+    void GrondIn(bool isHunt)
     {
-        Collider2D[] picTarget = Physics2D.OverlapBoxAll(cacheEnemy.rb.transform.position, enemy.scanRange, 0, cacheEnemy.layerTarget);
-        teste = Physics2D.OverlapBoxAll(transform.position, enemy.scanRange, 0, cacheEnemy.layerTarget);
-        if (picTarget.Length <= 0)
+        if (isHunt)
         {
-            Debug.Log("Scan not found target. Ground Now!");
-            enemy.Hunt = false;
-            
+            cacheEnemy.bC.size = Vector2.Lerp(cacheEnemy.bC.size, new Vector2(cacheEnemy.bC.size.x, 1), 5 * Time.deltaTime);
+            cacheEnemy.bC.offset = Vector2.Lerp(cacheEnemy.bC.offset, new Vector2(0, 0), 2 * Time.deltaTime);
+            Invoke("fire", 1f);
+            CD += Time.deltaTime;
         }
-        else
+        if (!isHunt)
         {
-            foreach (Collider2D targetOnRange in picTarget)
-            {
-                Debug.Log("Scan Result is:" + targetOnRange.name + " Start hunt!");
-                enemy.Hunt = true;
-                if (targetOnRange.transform.position.x < cacheEnemy.rb.position.x)
-                    cacheEnemy.rb.transform.rotation = new Quaternion(0,180f,0,0);
-                else
-                    cacheEnemy.rb.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
+            cacheEnemy.bC.size = Vector2.Lerp(cacheEnemy.bC.size, new Vector2(cacheEnemy.bC.size.x, 0.25f), 3 * Time.deltaTime);
+            cacheEnemy.bC.offset = Vector2.Lerp(cacheEnemy.bC.offset, new Vector2(0, 0.3f), 3 * Time.deltaTime);
         }
-
     }
-
 
     private void OnDrawGizmos()
     {

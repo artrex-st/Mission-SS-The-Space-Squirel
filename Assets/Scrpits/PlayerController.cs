@@ -138,15 +138,11 @@ public class PlayerController : MonoBehaviour
         // crouch
         if (Input.GetKeyDown(KeyCode.S))
         {
-            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y / 2f);
-            cacheMove.bc.offset = new Vector2(0, -0.25f);
-            playerStatus.isCrouch = true;
+            Crouch(true);
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
-            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y * 2);
-            cacheMove.bc.offset = new Vector2(0, 0);
-            playerStatus.isCrouch = false;
+            Crouch(false);
         }
         // end crouch
 
@@ -205,6 +201,21 @@ public class PlayerController : MonoBehaviour
             testeSword.SetActive(true);
         else
             testeSword.SetActive(false);
+    }
+    void Crouch(bool isCouch)
+    {
+        if (isCouch)
+        {
+            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y / 2f);
+            cacheMove.bc.offset = new Vector2(0, -0.25f);
+            playerStatus.isCrouch = true;
+        }
+        if (!isCouch)
+        {
+            cacheMove.bc.size = new Vector2(cacheMove.bc.size.x, cacheMove.bc.size.y * 2f);
+            cacheMove.bc.offset = new Vector2(0, 0);
+            playerStatus.isCrouch = false;
+        }
     }
     // ##### end Procedures ##### //
 
