@@ -17,7 +17,7 @@ TagManager:
   - Ground
   - Enemy
   - Player
-  - 
+  - Fundo
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 4148113677
+    locked: 0
+  - name: Fundo
+    uniqueID: 3874479907
     locked: 0
