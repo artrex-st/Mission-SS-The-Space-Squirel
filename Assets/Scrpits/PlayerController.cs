@@ -72,6 +72,8 @@ public class ScriptsImport
     public WeaponRange WeaponScriptR;
     [Tooltip("Script Of Melee Weapon.")]
     public WeaponMelee WeaponScriptM;
+    [Tooltip("Script of Health Bar UI for Player Displays HP.")]
+    public HealthBar healthBar;
 }
 
 public class PlayerController : MonoBehaviour
@@ -99,6 +101,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         cacheMove.rb.gravityScale = GetComponent<Rigidbody2D>().gravityScale;
+        sI.healthBar.SetMaxHealth(playerStatus.maxHP);
+        playerStatus.currHP = playerStatus.maxHP;
     }
 
     void Update()
@@ -222,7 +226,18 @@ public class PlayerController : MonoBehaviour
     // ##### Colliders ##### //
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        
+        if (coll.gameObject.layer.Equals(9))
+        {
+            playerStatus.currHP -= 20;
+            Debug.Log("Player hit by:" + coll.gameObject.name + " and lose: "+20+"HP.") ;
+        }
+        if (coll.gameObject.layer.Equals(12))
+        {
+            playerStatus.currHP -= 100;
+            Debug.Log("Player hit by:" + coll.gameObject.name + " and DIE!");
+        }
+        sI.healthBar.SetHealth(playerStatus.currHP);
+
     }
     private void OnCollisionStay2D(Collision2D coll)
     {
