@@ -640,9 +640,9 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: b5599925-9d17-4b17-b5ba-0006ed108592
+  cloudProjectId: 68c035b2-4363-4fd6-be3c-f345c5feed59
   framebufferDepthMemorylessMode: 0
-  projectName: Squirel
+  projectName: TDD-2D-UnityAdds
   organizationId: arthur-2930717
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
