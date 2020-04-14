@@ -204,6 +204,10 @@ public class PlayerController : MonoBehaviour
         cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
         playerStatus.fuel -= 3 * Time.deltaTime;
         sI.fuelBar.SetBarValue(playerStatus.fuel);
+        if (playerStatus.fuel <= playerStatus.maxFuel * 0.3f)
+        {
+            print("Pa chama animação que está no final do combustivel!");
+        }
     }
     void WeaponSprite()
     {

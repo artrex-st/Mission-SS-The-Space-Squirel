@@ -20,4 +20,9 @@ public class UiBar : MonoBehaviour
         Slider.value = health;
         fill.color = gradient.Evaluate(Slider.normalizedValue);
     }
+    public void GetAnimation()
+    {
+        
+
+    }
 }
