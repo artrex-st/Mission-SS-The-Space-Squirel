@@ -10,25 +10,28 @@ using UnityEngine.SocialPlatforms;
 [System.Serializable]
 public class PlayerStatus
 {
-    // float
+    // Base States
     [Tooltip("Max Health value.")]
     public float maxHP;
     [Tooltip("Current Health value.")]
     public float currHP;
     [Range(0f, 50f), Tooltip("Speed of player will moved.")]
     public float speed = 10;
-    [Range(0f, 50f), Tooltip("The more jumpforce it has, more higher and faster it will go.")]
+    [Range(-30f,30f), Tooltip("Axis of movement direction.")]
+    public float moveTo;
+    // Status of Features
+    [Space(10), Range(0f, 50f), Tooltip("The more jumpforce it has, more higher and faster it will go.")]
     public float jumpForce = 20;
     [Range(0f, 10f), Tooltip("Building...")]
     public float gravity = 2;
+    [Range(0f, 100f), Tooltip("How much fuel his can store.")]
+    public float maxFuel = 50;
     [Range(0f, 100f), Tooltip("How much fuel his has. (need fuel to fly)")]
     public float fuel = 50;
     [Range(0f, 50f), Tooltip("The higher is the value, more faster it will goes to up")]
     public float flyForce = 40f;
-    [Range(-30f,30f), Tooltip("Axis of movement direction.")]
-    public float moveTo;
-    //
-    [Range(-100f, 100f), Tooltip("Building...")]
+    // Status of Combat
+    [Space(10), Range(-100f, 100f), Tooltip("Building...")]
     public float attack;
     [Range(-100f, 100f), Tooltip("Building...")]
     public float defence;
@@ -38,8 +41,8 @@ public class PlayerStatus
     public float breath;
     [Range(-10f, 10f), Tooltip("Time to use next Attack.")]
     public float WeaponCooldown;
-    // booleans
-    [Tooltip("Indicate if Player Can Move.")]
+    // Check's
+    [Space(10), Tooltip("Indicate if Player Can Move.")]
     public bool canMove;
     [Tooltip("Indicates if Player has moving.")]
     public bool isMoving;
@@ -73,7 +76,9 @@ public class ScriptsImport
     [Tooltip("Script Of Melee Weapon.")]
     public WeaponMelee WeaponScriptM;
     [Tooltip("Script of Health Bar UI for Player Displays HP.")]
-    public HealthBar healthBar;
+    public UiBar healthBar;
+    [Tooltip("Script of Health Bar UI for Player Displays HP.")]
+    public UiBar fuelBar;
 }
 
 public class PlayerController : MonoBehaviour
@@ -101,8 +106,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         cacheMove.rb.gravityScale = GetComponent<Rigidbody2D>().gravityScale;
-        sI.healthBar.SetMaxHealth(playerStatus.maxHP);
+        sI.healthBar.SetMaxBarValue(playerStatus.maxHP);
         playerStatus.currHP = playerStatus.maxHP;
+        sI.fuelBar.SetMaxBarValue(playerStatus.fuel);
     }
 
     void Update()
@@ -197,7 +203,7 @@ public class PlayerController : MonoBehaviour
         }
         cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
         playerStatus.fuel -= 3 * Time.deltaTime;
-        Debug.Log("Fuel in:" + playerStatus.fuel);
+        sI.fuelBar.SetBarValue(playerStatus.fuel);
     }
     void WeaponSprite()
     {
@@ -236,7 +242,7 @@ public class PlayerController : MonoBehaviour
             playerStatus.currHP -= 100;
             Debug.Log("Player hit by:" + coll.gameObject.name + " and DIE!");
         }
-        sI.healthBar.SetHealth(playerStatus.currHP);
+        sI.healthBar.SetBarValue(playerStatus.currHP);
 
     }
     private void OnCollisionStay2D(Collision2D coll)
