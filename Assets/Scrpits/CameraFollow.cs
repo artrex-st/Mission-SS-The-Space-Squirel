@@ -14,8 +14,24 @@ public class CameraFollow : MonoBehaviour
 		CameraTransform = GetComponent<Transform>();
 
 	}
-	void Update()
+	void LateUpdate()
 	{
-		CameraTransform.position = Vector3.Lerp(CameraTransform.position,new Vector3(PlayerTransform.position.x, PlayerTransform.position.y, CameraTransform.position.z), speed * Time.deltaTime);
+		SimpleFollow();
 	}
+
+	void SimpleFollow()
+	{
+		CameraTransform.position = Vector3.Lerp(CameraTransform.position, new Vector3(PlayerTransform.position.x, PlayerTransform.position.y, CameraTransform.position.z), speed * Time.deltaTime);
+	}
+
+	void RoundFollow()
+	{
+		CameraTransform.position = Vector3.Lerp(CameraTransform.position, new Vector3(Mathf.Round(PlayerTransform.position.x), Mathf.Round(PlayerTransform.position.y), CameraTransform.position.z), speed * Time.deltaTime);
+	}
+	void MaxRangeFollow()
+	{
+		CameraTransform.position = Vector3.MoveTowards(CameraTransform.position, new Vector3(PlayerTransform.position.x, PlayerTransform.position.y, CameraTransform.position.z), speed * Time.deltaTime);
+	}
+
+
 }

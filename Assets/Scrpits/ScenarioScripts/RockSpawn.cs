@@ -44,7 +44,7 @@ public class RockSpawn : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(rockDestroyPoint.transform.position, rangeToDestroy, layerOfRock);
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log(enemy.name+"Hiting to destroy.");
+            //Debug.Log(enemy.name+"Hiting to destroy.");
             Destroy(enemy.gameObject);
         }
     }

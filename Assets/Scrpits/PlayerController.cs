@@ -108,7 +108,8 @@ public class PlayerController : MonoBehaviour
         cacheMove.rb.gravityScale = GetComponent<Rigidbody2D>().gravityScale;
         sI.healthBar.SetMaxBarValue(playerStatus.maxHP);
         playerStatus.currHP = playerStatus.maxHP;
-        sI.fuelBar.SetMaxBarValue(playerStatus.fuel);
+        sI.fuelBar.SetMaxBarValue(playerStatus.maxFuel);
+        sI.fuelBar.SetBarValue(playerStatus.fuel);
     }
 
     void Update()
@@ -207,6 +208,7 @@ public class PlayerController : MonoBehaviour
         if (playerStatus.fuel <= playerStatus.maxFuel * 0.3f)
         {
             print("Pa chama animação que está no final do combustivel!");
+            
         }
     }
     void WeaponSprite()

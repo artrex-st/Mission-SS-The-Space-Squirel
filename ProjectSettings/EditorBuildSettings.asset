@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 1c4d6e6a13129fb4b9e7a96206141df7
+  - enabled: 1
+    path: Assets/Scenes/Cenariodojogo.unity
+    guid: 7a38bb9646ce0b149a4192ff8d147998
+  - enabled: 1
     path: Assets/Scenes/Testes.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

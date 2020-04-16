@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UpDown : MonoBehaviour
 {
+    // testar MoveTowards e targets
     public Vector3 initionPos;
     public float CD;
     public float maxTimeToDown=7;

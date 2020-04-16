@@ -31,7 +31,7 @@ Transform:
   - {fileID: 9195138784373572520}
   - {fileID: 9195138785733563362}
   m_Father: {fileID: 9195138785408581348}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9195138784149072404
 MonoBehaviour:
@@ -123,7 +123,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9195138785631881011}
-  - {fileID: 9195138785823260595}
   - {fileID: 9195138784149072405}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -144,11 +143,12 @@ MonoBehaviour:
     maxHP: 100
     currHP: 0
     speed: 10
+    moveTo: 0
     jumpForce: 4
     gravity: 0
+    maxFuel: 50
     fuel: 8.3
     flyForce: 4
-    moveTo: 0
     attack: 0
     defence: 0
     resist: 0
@@ -171,6 +171,8 @@ MonoBehaviour:
   sI:
     WeaponScriptR: {fileID: 0}
     WeaponScriptM: {fileID: 0}
+    healthBar: {fileID: 0}
+    fuelBar: {fileID: 0}
   cooldown: 0
 --- !u!212 &9195138785408581349
 SpriteRenderer:
@@ -417,33 +419,3 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
---- !u!1 &9195138785823260592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9195138785823260595}
-  m_Layer: 0
-  m_Name: GroundChek
-  m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &9195138785823260595
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9195138785823260592}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 9195138785408581348}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

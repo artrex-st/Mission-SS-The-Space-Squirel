@@ -8,7 +8,12 @@ public class UiBar : MonoBehaviour
     public Slider Slider;
     public Gradient gradient;
     public Image fill;
+    WaitForSecondsRealtime _wait;
 
+    private void Start()
+    {
+        _wait = new WaitForSecondsRealtime(0.3f);
+    }
     public void SetMaxBarValue(float health)
     {
         Slider.maxValue = health;
@@ -22,7 +27,6 @@ public class UiBar : MonoBehaviour
     }
     public void GetAnimation()
     {
-        
 
     }
 }

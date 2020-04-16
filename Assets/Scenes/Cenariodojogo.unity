@@ -896,7 +896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 159.86, y: -73.51}
+  m_AnchoredPosition: {x: 159.86, y: -73.51001}
   m_SizeDelta: {x: 304.71, y: 27.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589852042
@@ -1150,7 +1150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220.95, y: -27.308}
+  m_AnchoredPosition: {x: 220.95, y: -27.307999}
   m_SizeDelta: {x: 426.88, y: 44.615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661750952
@@ -1464,7 +1464,7 @@ PrefabInstance:
     - target: {fileID: 9195138785408581351, guid: 2344ac5bdc99dc845889e64dfd21631f,
         type: 3}
       propertyPath: playerStatus.fuel
-      value: 100
+      value: 45.9
       objectReference: {fileID: 0}
     - target: {fileID: 9195138785408581351, guid: 2344ac5bdc99dc845889e64dfd21631f,
         type: 3}
@@ -1476,6 +1476,11 @@ PrefabInstance:
       propertyPath: sI.fuelBar
       value: 
       objectReference: {fileID: 589852044}
+    - target: {fileID: 9195138785408581351, guid: 2344ac5bdc99dc845889e64dfd21631f,
+        type: 3}
+      propertyPath: playerStatus.maxFuel
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9195138785408581352, guid: 2344ac5bdc99dc845889e64dfd21631f,
         type: 3}
       propertyPath: m_Name
