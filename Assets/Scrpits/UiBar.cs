@@ -8,11 +8,11 @@ public class UiBar : MonoBehaviour
     public Slider Slider;
     public Gradient gradient;
     public Image fill;
-    WaitForSecondsRealtime _wait;
+    public GameObject Animation;
 
     private void Start()
     {
-        _wait = new WaitForSecondsRealtime(0.3f);
+        Animation.SetActive(false);
     }
     public void SetMaxBarValue(float health)
     {
@@ -25,8 +25,8 @@ public class UiBar : MonoBehaviour
         Slider.value = health;
         fill.color = gradient.Evaluate(Slider.normalizedValue);
     }
-    public void GetAnimation()
+    public void GetAnimationOn(bool lowFuel)
     {
-
+        Animation.SetActive(lowFuel);
     }
 }

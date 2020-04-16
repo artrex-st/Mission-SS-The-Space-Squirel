@@ -208,8 +208,9 @@ public class PlayerController : MonoBehaviour
         if (playerStatus.fuel <= playerStatus.maxFuel * 0.3f)
         {
             print("Pa chama animação que está no final do combustivel!");
-            
-        }
+            sI.fuelBar.GetAnimationOn(true);
+        }else
+            sI.fuelBar.GetAnimationOn(false);
     }
     void WeaponSprite()
     {
@@ -232,6 +233,11 @@ public class PlayerController : MonoBehaviour
             cacheMove.bc.offset = new Vector2(0, 0);
             playerStatus.isCrouch = false;
         }
+    }
+    public void ApplyDamage(float dmg)
+    {
+        playerStatus.currHP -= dmg;
+        sI.healthBar.SetBarValue(playerStatus.currHP);
     }
     // ##### end Procedures ##### //
 
