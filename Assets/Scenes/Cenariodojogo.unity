@@ -325,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 4258046928865734559, guid: 5fd9c2a500e9f274098e64a15c88a5c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4258046928865734559, guid: 5fd9c2a500e9f274098e64a15c88a5c6,
         type: 3}
@@ -465,12 +465,18 @@ PrefabInstance:
     - target: {fileID: 6659700006049500457, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_Name
-      value: RockSpawn (1)
+      value: RockSpawn1
       objectReference: {fileID: 0}
+    - target: {fileID: 6659700006049500457, guid: c3fd8895695974044b7ba14a5996a61a,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.05
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
@@ -480,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.57422
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
@@ -570,7 +576,7 @@ PrefabInstance:
     - target: {fileID: 4258046928865734559, guid: 5fd9c2a500e9f274098e64a15c88a5c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4258046928865734559, guid: 5fd9c2a500e9f274098e64a15c88a5c6,
         type: 3}
@@ -639,7 +645,7 @@ PrefabInstance:
     - target: {fileID: 2561564833584086510, guid: f5aab751b837f7842ad4492cd8833611,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2561564833584086510, guid: f5aab751b837f7842ad4492cd8833611,
         type: 3}
@@ -900,7 +906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840219197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.10608, y: 33.015713, z: -28.698334}
+  m_LocalPosition: {x: -5.10608, y: 33.015713, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2018806561}
@@ -2634,7 +2640,7 @@ PrefabInstance:
     - target: {fileID: 2561564833584086510, guid: f5aab751b837f7842ad4492cd8833611,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2561564833584086510, guid: f5aab751b837f7842ad4492cd8833611,
         type: 3}
@@ -2708,12 +2714,18 @@ PrefabInstance:
     - target: {fileID: 6659700006049500457, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_Name
-      value: RockSpawn (2)
+      value: RockSpawn2
       objectReference: {fileID: 0}
+    - target: {fileID: 6659700006049500457, guid: c3fd8895695974044b7ba14a5996a61a,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.16
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
@@ -2723,7 +2735,7 @@ PrefabInstance:
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.57422
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
@@ -20808,7 +20820,7 @@ PrefabInstance:
     - target: {fileID: 1551327370693375868, guid: 0841a82d10025ce44b0a16f54daaa707,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1551327370693375868, guid: 0841a82d10025ce44b0a16f54daaa707,
         type: 3}
@@ -20877,7 +20889,7 @@ PrefabInstance:
     - target: {fileID: 1551327370693375868, guid: 0841a82d10025ce44b0a16f54daaa707,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1551327370693375868, guid: 0841a82d10025ce44b0a16f54daaa707,
         type: 3}
@@ -20951,12 +20963,18 @@ PrefabInstance:
     - target: {fileID: 6659700006049500457, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_Name
-      value: RockSpawn
+      value: RockSpawn0
       objectReference: {fileID: 0}
+    - target: {fileID: 6659700006049500457, guid: c3fd8895695974044b7ba14a5996a61a,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.73
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
@@ -20966,7 +20984,7 @@ PrefabInstance:
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.57422
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6659700006049500459, guid: c3fd8895695974044b7ba14a5996a61a,
         type: 3}
@@ -53588,7 +53606,7 @@ PrefabInstance:
     - target: {fileID: 2561564833584086510, guid: f5aab751b837f7842ad4492cd8833611,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2561564833584086510, guid: f5aab751b837f7842ad4492cd8833611,
         type: 3}
@@ -53657,7 +53675,7 @@ PrefabInstance:
     - target: {fileID: 1551327370693375868, guid: 0841a82d10025ce44b0a16f54daaa707,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1551327370693375868, guid: 0841a82d10025ce44b0a16f54daaa707,
         type: 3}
@@ -53805,7 +53823,7 @@ PrefabInstance:
     - target: {fileID: 4258046928865734559, guid: 5fd9c2a500e9f274098e64a15c88a5c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.698334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4258046928865734559, guid: 5fd9c2a500e9f274098e64a15c88a5c6,
         type: 3}
