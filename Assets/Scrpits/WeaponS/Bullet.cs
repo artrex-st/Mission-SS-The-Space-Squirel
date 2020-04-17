@@ -13,7 +13,6 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         BulletBody = GetComponent<Rigidbody2D>();
-        gameObject.tag = transform.root.tag;
         BulletBody.AddForce(new Vector2(transform.right.x * speed, 0), ForceMode2D.Impulse);
     }
     private void Update()
@@ -29,7 +28,7 @@ public class Bullet : MonoBehaviour
         colorBullet.color = Color.red;
         Destroy(gameObject, 0.1f);
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius * 1.1f);
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Enemy")
             coll.gameObject.GetComponent<PlayerController>().ApplyDamage(Dmg);
     }
     public void GetTagOf()
