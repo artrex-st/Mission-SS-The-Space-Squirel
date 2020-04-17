@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -12,7 +13,7 @@ public class PlayerStatus
 {
     // Base States
     [Tooltip("Max Health value.")]
-    public float maxHP;
+    public float maxHP=100;
     [Tooltip("Current Health value.")]
     public float currHP;
     [Range(0f, 50f), Tooltip("Speed of player will moved.")]
@@ -92,6 +93,7 @@ public class PlayerController : MonoBehaviour
     [Range(-2f, 10f)]
     public float cooldown;
     private GameObject testeSword;
+    public GameObject testeUi;
 
     // ##### Bases ##### //
     private void Awake()
@@ -101,15 +103,20 @@ public class PlayerController : MonoBehaviour
         cacheMove.animator = GetComponentInChildren<Animator>();
         sI.WeaponScriptR = GetComponentInChildren<WeaponRange>();
         sI.WeaponScriptM = FindObjectOfType<WeaponMelee>();
-        testeSword = GameObject.Find("Sword");
+        testeSword = GameObject.Find("Sword"); // test of animation
+
+        sI.healthBar = GameObject.Find("UI/HealtPlayerBar").GetComponent<UiBar>();
+        sI.fuelBar = GameObject.Find("UI/FuelBar").GetComponent<UiBar>();
+
     }
     void Start()
     {
         cacheMove.rb.gravityScale = GetComponent<Rigidbody2D>().gravityScale;
         sI.healthBar.SetMaxBarValue(playerStatus.maxHP);
+        sI.healthBar.SetBarValue(playerStatus.maxHP,"Player Health");
         playerStatus.currHP = playerStatus.maxHP;
         sI.fuelBar.SetMaxBarValue(playerStatus.maxFuel);
-        sI.fuelBar.SetBarValue(playerStatus.fuel);
+        sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
     }
 
     void Update()
@@ -204,7 +211,7 @@ public class PlayerController : MonoBehaviour
         }
         cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
         playerStatus.fuel -= 3 * Time.deltaTime;
-        sI.fuelBar.SetBarValue(playerStatus.fuel);
+        sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
         if (playerStatus.fuel <= playerStatus.maxFuel * 0.3f)
         {
             print("Pa chama animação que está no final do combustivel!");
@@ -237,7 +244,7 @@ public class PlayerController : MonoBehaviour
     public void ApplyDamage(float dmg)
     {
         playerStatus.currHP -= dmg;
-        sI.healthBar.SetBarValue(playerStatus.currHP);
+        sI.healthBar.SetBarValue(playerStatus.currHP,"Player Health");
     }
     // ##### end Procedures ##### //
 
@@ -246,13 +253,14 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.gameObject.layer.Equals(9))
         {
-            playerStatus.currHP -= 20;
+            ApplyDamage(20);
             Debug.Log("Player hit by:" + coll.gameObject.name + " and lose: "+20+"HP.") ;
         }
-        if (coll.gameObject.layer.Equals(12))
+        if (coll.gameObject.layer.Equals(12) || playerStatus.currHP <= 0f)
         {
             playerStatus.currHP -= 100;
-            Debug.Log("Player hit by:" + coll.gameObject.name + " and DIE!");
+            Destroy(gameObject, 0.1f);
+            SceneManager.LoadScene("MainMenu");
         }
         sI.healthBar.SetBarValue(playerStatus.currHP);
 

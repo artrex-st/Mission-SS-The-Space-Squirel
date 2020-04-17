@@ -13,20 +13,27 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         BulletBody = GetComponent<Rigidbody2D>();
+        gameObject.tag = transform.root.tag;
         BulletBody.AddForce(new Vector2(transform.right.x * speed, 0), ForceMode2D.Impulse);
     }
     private void Update()
     {
         if (StartSelfDestruction)
-            transform.localScale = Vector3.Lerp(transform.localScale, transform.localScale * 1.2f, Time.deltaTime * 2);
+            transform.localScale = Vector3.Lerp(transform.localScale, transform.localScale * 1.4f, Time.deltaTime * 2);
+        Destroy(gameObject, 5);
     }
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("Hit: " + coll.gameObject.name);
         StartSelfDestruction = true;
+        SpriteRenderer colorBullet = GetComponent<SpriteRenderer>();
+        colorBullet.color = Color.red;
         Destroy(gameObject, 0.1f);
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius * 1.1f);
-        if (coll.gameObject.name == "Enemy")
-            Debug.Log("Hit: "+coll.gameObject.name);//collision.gameObject.GetComponent<FollowPlayerFly>().TakeDmg(Dmg);
+        if (coll.gameObject.tag == "Player")
+            coll.gameObject.GetComponent<PlayerController>().ApplyDamage(Dmg);
+    }
+    public void GetTagOf()
+    {
+
     }
 }

@@ -10,6 +10,7 @@ public class EnemyGround
     public Vector3 scanRange = new Vector3(2,2,0);
     public bool Hunt = false;
     public float health=100;
+    public float dmg=10;
 
 
 }

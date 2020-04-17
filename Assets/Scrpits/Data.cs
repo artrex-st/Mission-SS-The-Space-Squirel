@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Data : MonoBehaviour
 {
-    public static string map = "fase";
-    public static int cont = 0;
     public static float recarga = 1;
-    public GameObject[] datas;
+    public static GameObject[] datas;
     public static AudioClip[] musicas;
 
     void Awake()
@@ -29,6 +27,10 @@ public class Data : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Cenariodojogo");
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
     public void QuitGame()
     {

@@ -16,6 +16,7 @@ public class WeaponRange : MonoBehaviour
     }
     public void Shoot()
     {
-        Instantiate(Bullet[0]/* Type of bullety */, FirePoint.position, FirePoint.rotation);
+        Instantiate(Bullet[0]/* Type of bullety */, FirePoint.position, FirePoint.rotation, transform);
     }
+
 }
