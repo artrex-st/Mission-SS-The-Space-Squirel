@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
-public class Bullet : MonoBehaviour
+public class BulletEnemy : MonoBehaviour
 {
     public float speed = 20f, Dmg = 5f;
     public Rigidbody2D BulletBody;
     public bool StartSelfDestruction;
-    public Collider2D[] hitEnemies;
 
     void Start()
     {
@@ -27,17 +25,8 @@ public class Bullet : MonoBehaviour
         StartSelfDestruction = true;
         SpriteRenderer colorBullet = GetComponent<SpriteRenderer>();
         colorBullet.color = Color.red;
-        if (coll.gameObject.tag == "Enemy")
-            coll.gameObject.GetComponent<GroundEnemy>().ApplyDamage(Dmg);
+        if (coll.gameObject.tag == "Player")
+            coll.gameObject.GetComponent<PlayerController>().ApplyDamage(Dmg);
         Destroy(gameObject, 0.1f);
-        //hitEnemies = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius * 1.1f);
-        //foreach (Collider2D enemy in hitEnemies)
-        //{
-        //    if (enemy.tag.Equals("Enemy"))
-        //    {
-        //        Debug.Log("Melee Hit in:" + enemy.name);
-        //        enemy.transform.root.gameObject.GetComponent<GroundEnemy>().ApplyDamage(Dmg);
-        //    }
-        //}
     }
 }

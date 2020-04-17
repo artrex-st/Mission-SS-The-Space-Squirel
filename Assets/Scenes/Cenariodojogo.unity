@@ -983,6 +983,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9195138785408581348, guid: 2344ac5bdc99dc845889e64dfd21631f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195138785408581348, guid: 2344ac5bdc99dc845889e64dfd21631f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195138785408581348, guid: 2344ac5bdc99dc845889e64dfd21631f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9195138785408581351, guid: 2344ac5bdc99dc845889e64dfd21631f,
         type: 3}
       propertyPath: playerStatus.fuel

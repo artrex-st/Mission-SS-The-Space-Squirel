@@ -37,4 +37,5 @@ public class Data : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit!");
     }
+
 }

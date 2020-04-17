@@ -245,6 +245,7 @@ public class PlayerController : MonoBehaviour
     {
         playerStatus.currHP -= dmg;
         sI.healthBar.SetBarValue(playerStatus.currHP,"Player Health");
+        Debug.Log("DmgApply Player call!!!");
     }
     // ##### end Procedures ##### //
 

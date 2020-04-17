@@ -11,8 +11,6 @@ public class EnemyGround
     public bool Hunt = false;
     public float health=100;
     public float dmg=10;
-
-
 }
 [System.Serializable]
 public class CacheEnemyGround
@@ -24,9 +22,6 @@ public class CacheEnemyGround
     [Tooltip("Script Of Ranged Weapon.")]
     public WeaponRange WeaponScriptR;
 }
-
-
-
 //ENEMY
 public class GroundEnemy : MonoBehaviour
 {
@@ -37,8 +32,8 @@ public class GroundEnemy : MonoBehaviour
 
     private void Awake()
     {
-        cacheEnemy.rb = GetComponentInChildren<Rigidbody2D>();
-        cacheEnemy.bC = GetComponentInChildren<BoxCollider2D>();
+        cacheEnemy.rb = GetComponent<Rigidbody2D>();
+        cacheEnemy.bC = GetComponent<BoxCollider2D>();
         cacheEnemy.layerTarget = LayerMask.GetMask("Player");
         InvokeRepeating("RangeScan", 0f, 0.5f); // RE-Scan area
     }
@@ -78,7 +73,9 @@ public class GroundEnemy : MonoBehaviour
     public void ApplyDamage(float dmg)
     {
         enemy.health -= dmg;
+        Debug.Log("Dmg Enemy call");
     }
+
     void GrondIn(bool isHunt)
     {
         if (isHunt)
