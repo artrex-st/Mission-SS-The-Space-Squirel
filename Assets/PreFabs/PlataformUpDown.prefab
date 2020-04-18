@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3573884263269663725}
   - component: {fileID: 3573884263269663724}
   - component: {fileID: 3573884263269663727}
+  - component: {fileID: 3242316395511546942}
   m_Layer: 8
   m_Name: PlataformUpDown
   m_TagString: Untagged
@@ -111,9 +112,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08817673, y: -0.0037927628}
+  m_Offset: {x: 0.08358383, y: 0.14750767}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -124,5 +125,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3080673, y: 0.7598095}
+  m_Size: {x: 3.3474045, y: 0.70080376}
   m_EdgeRadius: 0
+--- !u!251 &3242316395511546942
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573884263269663726}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
