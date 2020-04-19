@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2282042128683756407}
   - component: {fileID: 2282042128683756405}
   - component: {fileID: 2282042128683756406}
+  - component: {fileID: 1261709822046664256}
   m_Layer: 9
   m_Name: Rock
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1833264061
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 3606b58bbfbca6549ba0c6a5ae7d7f3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,3 +121,37 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &1261709822046664256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2282042128683756404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 23dfefe600000000033b418bcbe9eada439cba920d313ff7
+  m_ShapePath:
+  - {x: -0.30835629, y: -0.9424695, z: 0}
+  - {x: 0.2625575, y: -0.82354325, z: 0}
+  - {x: 0.62061524, y: -0.6302105, z: 0}
+  - {x: 0.8870771, y: -0.28824174, z: 0}
+  - {x: 0.9985974, y: 0.40319014, z: 0}
+  - {x: 0.7544408, y: 0.98707783, z: 0}
+  - {x: 0.37407875, y: 1.0277086, z: 0}
+  - {x: -0.049701214, y: 1.2284471, z: 0}
+  - {x: -0.62961173, y: 0.8938831, z: 0}
+  - {x: -0.9328754, y: 0.49638486, z: 0}
+  - {x: -1.0310878, y: -0.31054556, z: 0}
+  - {x: -0.8080462, y: -0.62280524, z: 0}
+  m_ShapePathHash: 1048875350
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -64548
