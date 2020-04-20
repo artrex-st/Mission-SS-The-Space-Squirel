@@ -21,6 +21,7 @@ public class WeaponMelee : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Melee Hit in:"+ enemy.name);
+            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(enemy.GetComponent<Rigidbody2D>().velocity.x *-0.8f, enemy.GetComponent<Rigidbody2D>().velocity.x * -1.1f),ForceMode2D.Impulse);
         }
     }
     private void OnDrawGizmos()

@@ -20,6 +20,7 @@ TagManager:
   - Enemy
   - Player
   - Fundo
+  - Bullet
   - 
   - 
   - 
@@ -38,8 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - HK
   m_SortingLayers:
   - name: Fundo
     uniqueID: 3874479907

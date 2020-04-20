@@ -4,6 +4,7 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SceneManagement;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -80,6 +81,8 @@ public class ScriptsImport
     public UiBar healthBar;
     [Tooltip("Script of Health Bar UI for Player Displays HP.")]
     public UiBar fuelBar;
+    [Tooltip("Rocket Light effect.")]
+    public UnityEngine.Experimental.Rendering.Universal.Light2D lightEffectRocket;
 }
 
 public class PlayerController : MonoBehaviour
@@ -107,6 +110,8 @@ public class PlayerController : MonoBehaviour
 
         sI.healthBar = GameObject.Find("UI/HealtPlayerBar").GetComponent<UiBar>();
         sI.fuelBar = GameObject.Find("UI/FuelBar").GetComponent<UiBar>();
+        sI.lightEffectRocket = GetComponentInChildren<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+        sI.lightEffectRocket.intensity=0;
 
     }
     void Start()
@@ -139,6 +144,10 @@ public class PlayerController : MonoBehaviour
         //jump / fly
         if (Input.GetButtonDown("Jump") && fIsGround())
             Jump();
+        if (Input.GetButtonUp("Jump"))
+        {
+            RocketEffectLearp(false);
+        }
         if (Input.GetButton("Jump") && playerStatus.fly && !fIsGround())
         {
             Fly();
@@ -209,9 +218,13 @@ public class PlayerController : MonoBehaviour
         {
             playerStatus.fly = false;
         }
-        cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
-        playerStatus.fuel -= 3 * Time.deltaTime;
-        sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
+        else
+        {
+            cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
+            playerStatus.fuel -= 3 * Time.deltaTime;
+            RocketEffectLearp(true);
+            sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
+        }
         if (playerStatus.fuel <= playerStatus.maxFuel * 0.3f)
         {
             print("Pa chama animação que está no final do combustivel!");
@@ -247,6 +260,24 @@ public class PlayerController : MonoBehaviour
         sI.healthBar.SetBarValue(playerStatus.currHP,"Player Health");
         Debug.Log("DmgApply Player call!!!");
     }
+    public void RocketEffectLearp(bool fly)
+    {
+        if (fly)
+        {
+            if (sI.lightEffectRocket.intensity < 5)
+            {
+                sI.lightEffectRocket.pointLightInnerRadius += Mathf.Lerp(0, 0.35f, 2*Time.deltaTime);
+                sI.lightEffectRocket.pointLightOuterRadius += Mathf.Lerp(0, 1f, 2*Time.deltaTime);
+                sI.lightEffectRocket.intensity += 3 * Time.deltaTime;
+            }
+        }else
+            if (!fly)
+            {
+            sI.lightEffectRocket.pointLightInnerRadius = 0;
+            sI.lightEffectRocket.pointLightOuterRadius = 0;
+            sI.lightEffectRocket.intensity = 0;
+            }
+    }
     // ##### end Procedures ##### //
 
     // ##### Colliders ##### //
@@ -257,7 +288,7 @@ public class PlayerController : MonoBehaviour
             ApplyDamage(20);
             Debug.Log("Player hit by:" + coll.gameObject.name + " and lose: "+20+"HP.") ;
         }
-        if (coll.gameObject.layer.Equals(12) || playerStatus.currHP <= 0f)
+        if (coll.gameObject.layer.Equals(31) || playerStatus.currHP <= 0f)
         {
             playerStatus.currHP -= 100;
             Destroy(gameObject, 0.1f);
