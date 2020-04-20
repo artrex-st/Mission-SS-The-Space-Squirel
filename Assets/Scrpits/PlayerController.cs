@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
         sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         WeaponSprite();
         if (playerStatus.WeaponCooldown < 5f)
@@ -133,6 +133,7 @@ public class PlayerController : MonoBehaviour
         {
             playerStatus.canMove = true;
             playerStatus.fly = true;
+            RocketEffectLearp(false);
         }
         else
             playerStatus.canMove = false;
@@ -209,6 +210,7 @@ public class PlayerController : MonoBehaviour
         if (!fIsGround() && playerStatus.fuel <= 0)
         {
             playerStatus.fly = false;
+            RocketEffectLearp(false);
         }
         cacheMove.rb.AddForce(new Vector2(0, playerStatus.jumpForce * 10), ForceMode2D.Impulse);
     }
@@ -217,6 +219,7 @@ public class PlayerController : MonoBehaviour
         if (!fIsGround() && playerStatus.fuel <= 0)
         {
             playerStatus.fly = false;
+            RocketEffectLearp(false);
         }
         else
         {
@@ -266,16 +269,16 @@ public class PlayerController : MonoBehaviour
         {
             if (sI.lightEffectRocket.intensity < 5)
             {
-                sI.lightEffectRocket.pointLightInnerRadius += Mathf.Lerp(0, 0.35f, 2*Time.deltaTime);
-                sI.lightEffectRocket.pointLightOuterRadius += Mathf.Lerp(0, 1f, 2*Time.deltaTime);
+                sI.lightEffectRocket.pointLightInnerRadius += Mathf.Lerp(0f, 0.1f, Time.deltaTime);
+                sI.lightEffectRocket.pointLightOuterRadius += Mathf.Lerp(0f, 0.3f, Time.deltaTime);
                 sI.lightEffectRocket.intensity += 3 * Time.deltaTime;
             }
         }else
             if (!fly)
             {
-            sI.lightEffectRocket.pointLightInnerRadius = 0;
-            sI.lightEffectRocket.pointLightOuterRadius = 0;
-            sI.lightEffectRocket.intensity = 0;
+                sI.lightEffectRocket.pointLightInnerRadius = 0.3f;
+                sI.lightEffectRocket.pointLightOuterRadius = 0.9f;
+                sI.lightEffectRocket.intensity = 0;
             }
     }
     // ##### end Procedures ##### //

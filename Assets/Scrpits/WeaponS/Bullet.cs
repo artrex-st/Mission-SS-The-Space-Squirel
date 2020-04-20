@@ -11,10 +11,17 @@ public class Bullet : MonoBehaviour
     public bool StartSelfDestruction;
     public Collider2D[] hitEnemies;
 
-    void Start()
+    private void Awake()
     {
         BulletBody = GetComponent<Rigidbody2D>();
+        //speed += GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity.x;
         BulletBody.AddForce(new Vector2(transform.right.x * speed, 0), ForceMode2D.Impulse);
+        Dmg = GameObject.Find("Player").GetComponent<PlayerController>().playerStatus.attack;
+        
+        
+    }
+    void Start()
+    {
     }
     private void Update()
     {
@@ -24,11 +31,13 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        StartSelfDestruction = true;
         SpriteRenderer colorBullet = GetComponent<SpriteRenderer>();
         colorBullet.color = Color.red;
         if (coll.gameObject.tag == "Enemy")
+        {
             coll.gameObject.GetComponent<GroundEnemy>().ApplyDamage(Dmg);
+            StartSelfDestruction = true;
+        }
         Destroy(gameObject, 0.1f);
         //hitEnemies = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius * 1.1f);
         //foreach (Collider2D enemy in hitEnemies)
