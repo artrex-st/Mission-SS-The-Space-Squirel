@@ -207,6 +207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  Dmg: 5
+  Dmg: 15
   BulletBody: {fileID: 0}
   StartSelfDestruction: 0

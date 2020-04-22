@@ -163,16 +163,6 @@ public class PlayerController : MonoBehaviour
         {
             attack();
         }
-        // crouch
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Crouch(true);
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            Crouch(false);
-        }
-        // end crouch
 
 
         //flip Sprite
@@ -181,6 +171,21 @@ public class PlayerController : MonoBehaviour
         else
             if (cacheMove.rb.velocity.x > 0)
             transform.rotation = new Quaternion(0, 0, 0, 0); //SpritePlayer.flipX = false;
+    }
+    private void Update()
+    {
+        // crouch
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            playerStatus.isCrouch = !playerStatus.isCrouch;
+            Crouch(playerStatus.isCrouch);
+        }
+        //if (Input.GetKeyUp(KeyCode.S))
+        //{
+        //    Crouch(false);
+        //}
+        // end crouch
+        
     }
     // ##### end Bases ##### //
 
@@ -259,9 +264,12 @@ public class PlayerController : MonoBehaviour
     }
     public void ApplyDamage(float dmg)
     {
-        playerStatus.currHP -= dmg;
+        if (playerStatus.defence >=dmg)
+        {
+            playerStatus.currHP -= 0;
+        }else
+            playerStatus.currHP -= dmg-playerStatus.defence;
         sI.healthBar.SetBarValue(playerStatus.currHP,"Player Health");
-        Debug.Log("DmgApply Player call!!!");
     }
     public void RocketEffectLearp(bool fly)
     {
@@ -289,7 +297,6 @@ public class PlayerController : MonoBehaviour
         if (coll.gameObject.layer.Equals(9))
         {
             ApplyDamage(20);
-            Debug.Log("Player hit by:" + coll.gameObject.name + " and lose: "+20+"HP.") ;
         }
         if (coll.gameObject.layer.Equals(31) || playerStatus.currHP <= 0f)
         {

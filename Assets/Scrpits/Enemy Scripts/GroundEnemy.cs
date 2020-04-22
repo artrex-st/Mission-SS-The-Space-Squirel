@@ -21,21 +21,37 @@ public class CacheEnemyGround
     public Vector3 HuntingPosition;
     [Tooltip("Script Of Ranged Weapon.")]
     public WeaponRange WeaponScriptR;
+    public Canvas canvasEnemy;
+}
+[System.Serializable]
+public class ScriptImport
+{
+    public UiBar healthBar;
 }
 //ENEMY
 public class GroundEnemy : MonoBehaviour
 {
     public EnemyGround enemy;
     public CacheEnemyGround cacheEnemy;
+    public ScriptImport sI;
     //public Collider2D[] teste;
     public float CD;
+    public quaternion testeUi;
+
 
     private void Awake()
     {
         cacheEnemy.rb = GetComponent<Rigidbody2D>();
         cacheEnemy.bC = GetComponent<BoxCollider2D>();
         cacheEnemy.layerTarget = LayerMask.GetMask("Player");
+        cacheEnemy.canvasEnemy = GetComponentInChildren<Canvas>();
+        sI.healthBar = cacheEnemy.canvasEnemy.GetComponentInChildren<UiBar>();
+        sI.healthBar.SetMaxBarValue(enemy.health);
+        sI.healthBar.SetBarValue(enemy.health);
+
+
         InvokeRepeating("RangeScan", 0f, 0.5f); // RE-Scan area
+
     }
     private void Start()
     {
@@ -59,6 +75,7 @@ public class GroundEnemy : MonoBehaviour
                     cacheEnemy.rb.transform.rotation = new Quaternion(0,180f,0,0);
                 else
                     cacheEnemy.rb.transform.rotation = new Quaternion(0, 0, 0, 0);
+
             }
         }
     }
@@ -73,7 +90,11 @@ public class GroundEnemy : MonoBehaviour
     public void ApplyDamage(float dmg)
     {
         enemy.health -= dmg;
-        Debug.Log("Dmg Enemy call");
+        sI.healthBar.SetBarValue(enemy.health);
+        if (enemy.health <=0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void GrondIn(bool isHunt)
