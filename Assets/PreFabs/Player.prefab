@@ -274,11 +274,11 @@ MonoBehaviour:
     maxFuel: 100
     fuel: 100
     flyForce: 6
-    attack: 0
-    defence: 0
-    resist: 0
-    breath: 0
-    WeaponCooldown: 0
+    attack: 10
+    defence: 10
+    resist: 10
+    breath: 10
+    WeaponCooldown: 1
     canMove: 0
     isMoving: 0
     isGround: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1338
+  m_InstanceId: -1376
 --- !u!1 &9195138785631881008
 GameObject:
   m_ObjectHideFlags: 0
