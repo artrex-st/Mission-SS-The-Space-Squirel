@@ -30,6 +30,8 @@ public class PlayerStatus
     public float maxFuel = 50;
     [Range(0f, 100f), Tooltip("How much fuel his has. (need fuel to fly)")]
     public float fuel = 50;
+    [Tooltip("Fuel cost per Second.")]
+    public float fuelCost;
     [Range(0f, 50f), Tooltip("The higher is the value, more faster it will goes to up")]
     public float flyForce = 40f;
     // Status of Combat
@@ -229,7 +231,7 @@ public class PlayerController : MonoBehaviour, ICombatController
         else
         {
             cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
-            playerStatus.fuel -= 3 * Time.deltaTime;
+            playerStatus.fuel -= playerStatus.fuelCost * Time.deltaTime;
             RocketEffectLearp(true);
             sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
         }
