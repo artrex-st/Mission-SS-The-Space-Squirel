@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
         colorBullet.color = Color.red;
         if (coll.gameObject.tag == "Enemy")
         {
-            coll.gameObject.GetComponent<GroundEnemy>().ApplyDamage(Dmg);
+            coll.gameObject.GetComponent<ICombatController>().ApplyDmg(Dmg);
             StartSelfDestruction = true;
         }
         Destroy(gameObject, 0.1f);

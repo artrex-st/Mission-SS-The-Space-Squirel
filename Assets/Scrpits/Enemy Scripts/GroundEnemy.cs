@@ -29,13 +29,13 @@ public class ScriptImport
     public UiBar healthBar;
 }
 //ENEMY
-public class GroundEnemy : MonoBehaviour
+public class GroundEnemy : MonoBehaviour, ICombatController
 {
     public EnemyGround enemy;
     public CacheEnemyGround cacheEnemy;
     public ScriptImport sI;
     //public Collider2D[] teste;
-    public float CD;
+    public float coolDown;
     public quaternion testeUi;
 
 
@@ -81,20 +81,25 @@ public class GroundEnemy : MonoBehaviour
     }
     void fire()
     {
-        if (CD>=1)
+        if (coolDown>=1)
         {
             cacheEnemy.WeaponScriptR.Shoot();
-            CD = 0;
+            coolDown = 0;
         }
     }
-    public void ApplyDamage(float dmg)
+    public void ApplyDmg(float dmg)
     {
-        enemy.health -= dmg;
-        sI.healthBar.SetBarValue(enemy.health);
-        if (enemy.health <=0)
+        if (enemy.Hunt)
         {
-            Destroy(gameObject);
+            enemy.health -= dmg;
+            sI.healthBar.SetBarValue(enemy.health);
+            if (enemy.health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
+        else
+            Debug.Log("He has Protection! (don't receive damage)");
     }
 
     void GrondIn(bool isHunt)
@@ -103,13 +108,15 @@ public class GroundEnemy : MonoBehaviour
         {
             cacheEnemy.bC.size = Vector2.Lerp(cacheEnemy.bC.size, new Vector2(cacheEnemy.bC.size.x, 1), 5 * Time.deltaTime);
             cacheEnemy.bC.offset = Vector2.Lerp(cacheEnemy.bC.offset, new Vector2(0, 0), 2 * Time.deltaTime);
-            Invoke("fire", 1f);
-            CD += Time.deltaTime;
+            //Invoke("fire", 1f);
+            coolDown += Time.deltaTime;
+            fire();
         }
         if (!isHunt)
         {
             cacheEnemy.bC.size = Vector2.Lerp(cacheEnemy.bC.size, new Vector2(cacheEnemy.bC.size.x, 0.25f), 3 * Time.deltaTime);
             cacheEnemy.bC.offset = Vector2.Lerp(cacheEnemy.bC.offset, new Vector2(0, 0.3f), 3 * Time.deltaTime);
+            coolDown = 0;
         }
     }
 

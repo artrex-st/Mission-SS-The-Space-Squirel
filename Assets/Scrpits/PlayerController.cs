@@ -85,7 +85,7 @@ public class ScriptsImport
     public UnityEngine.Experimental.Rendering.Universal.Light2D lightEffectRocket;
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ICombatController
 {
     [Tooltip("Player Variables and conditions")]
     public PlayerStatus playerStatus;
@@ -262,7 +262,7 @@ public class PlayerController : MonoBehaviour
             playerStatus.isCrouch = false;
         }
     }
-    public void ApplyDamage(float dmg)
+    public void ApplyDmg(float dmg)
     {
         if (playerStatus.defence >=dmg)
         {
@@ -296,7 +296,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.gameObject.layer.Equals(9))
         {
-            ApplyDamage(20);
+            ApplyDmg(20);
         }
         if (coll.gameObject.layer.Equals(31) || playerStatus.currHP <= 0f)
         {

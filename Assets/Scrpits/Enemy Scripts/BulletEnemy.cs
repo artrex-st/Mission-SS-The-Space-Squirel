@@ -26,7 +26,7 @@ public class BulletEnemy : MonoBehaviour
         SpriteRenderer colorBullet = GetComponent<SpriteRenderer>();
         colorBullet.color = Color.red;
         if (coll.gameObject.tag == "Player")
-            coll.gameObject.GetComponent<PlayerController>().ApplyDamage(Dmg);
+            coll.gameObject.GetComponent<ICombatController>().ApplyDmg(Dmg);
         Destroy(gameObject, 0.1f);
     }
 }

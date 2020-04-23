@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PyshicsMove : MonoBehaviour, IMoveInterface
 {
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float moveSpeed=0;
     private Vector2 moveVector;
     private Rigidbody2D rb2D;
 
