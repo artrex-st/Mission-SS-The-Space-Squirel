@@ -35,9 +35,9 @@ public class PlayerStatus
     [Range(0f, 50f), Tooltip("The higher is the value, more faster it will goes to up")]
     public float flyForce = 40f;
     // Status of Combat
-    [Space(10), Range(-100f, 100f), Tooltip("Building...")]
+    [Space(10), Range(-100f, 100f), Tooltip("Addes more Damage to attacks of player.")]
     public float attack;
-    [Range(-100f, 100f), Tooltip("Building...")]
+    [Range(-100f, 100f), Tooltip("Reduce damage taken of enemies.")]
     public float defence;
     [Range(-100f, 100f), Tooltip("Building...")]
     public float resist;
