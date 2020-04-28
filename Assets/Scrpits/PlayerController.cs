@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour, ICombatController
         sI.fuelBar.SetMaxBarValue(playerStatus.maxFuel);
         sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
     }
-
+    
     void FixedUpdate()
     {
         WeaponSprite();
@@ -144,6 +144,15 @@ public class PlayerController : MonoBehaviour, ICombatController
         if (playerStatus.canMove || playerStatus.fly)
             cacheMove.rb.velocity = new Vector2(playerStatus.moveTo, cacheMove.rb.velocity.y);
 
+        //flip Sprite
+        if (cacheMove.rb.velocity.x < 0)
+            transform.rotation = new Quaternion(0, 180, 0, 0);//SpritePlayer.flipX = true;
+        else
+            if (cacheMove.rb.velocity.x > 0)
+            transform.rotation = new Quaternion(0, 0, 0, 0); //SpritePlayer.flipX = false;
+    }
+    private void Update()
+    {
         //jump / fly
         if (Input.GetButtonDown("Jump") && fIsGround())
             Jump();
@@ -166,16 +175,6 @@ public class PlayerController : MonoBehaviour, ICombatController
             attack();
         }
 
-
-        //flip Sprite
-        if (cacheMove.rb.velocity.x < 0)
-            transform.rotation = new Quaternion(0, 180, 0, 0);//SpritePlayer.flipX = true;
-        else
-            if (cacheMove.rb.velocity.x > 0)
-            transform.rotation = new Quaternion(0, 0, 0, 0); //SpritePlayer.flipX = false;
-    }
-    private void Update()
-    {
         // crouch
         if (Input.GetKeyDown(KeyCode.S))
         {
