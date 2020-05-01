@@ -71,6 +71,7 @@ public class CacheMove
     public LayerMask layerOfGround;
     [Tooltip("Testing (building...)")]
     public Animator animator;
+    public WheelJoint2D grabPoint;
 }
 [System.Serializable]
 public class ScriptsImport
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour, ICombatController
     [Range(-2f, 10f)]
     public float cooldown;
     private GameObject testeSword;
-    public GameObject testeUi;
+    public bool testeBool;
 
     // ##### Bases ##### //
     private void Awake()
@@ -106,6 +107,9 @@ public class PlayerController : MonoBehaviour, ICombatController
         cacheMove.rb = GetComponent<Rigidbody2D>();
         cacheMove.bc = GetComponent<BoxCollider2D>();
         cacheMove.animator = GetComponentInChildren<Animator>();
+
+        cacheMove.grabPoint = GetComponent<WheelJoint2D>();
+
         sI.WeaponScriptR = GetComponentInChildren<WeaponRange>();
         sI.WeaponScriptM = FindObjectOfType<WeaponMelee>();
         testeSword = GameObject.Find("Sword"); // test of animation
@@ -174,6 +178,10 @@ public class PlayerController : MonoBehaviour, ICombatController
         {
             attack();
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            action(testeBool);
+        }
 
         // crouch
         if (Input.GetKeyDown(KeyCode.S))
@@ -206,6 +214,13 @@ public class PlayerController : MonoBehaviour, ICombatController
             playerStatus.WeaponCooldown = 0.7f;
             return;
         }
+    }
+    void action(bool grabOn)
+    {
+        cacheMove.grabPoint.connectedBody = sI.WeaponScriptM.GrabPoint();
+        
+        cacheMove.grabPoint.enabled = grabOn;
+        testeBool = !testeBool;
     }
     void GetAxis()
     {
