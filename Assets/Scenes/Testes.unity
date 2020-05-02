@@ -16156,6 +16156,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9195138785408581354, guid: 2344ac5bdc99dc845889e64dfd21631f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195138785408581354, guid: 2344ac5bdc99dc845889e64dfd21631f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.025
+      objectReference: {fileID: 0}
     - target: {fileID: 9195138785733563389, guid: 2344ac5bdc99dc845889e64dfd21631f,
         type: 3}
       propertyPath: grabLayer.m_Bits
