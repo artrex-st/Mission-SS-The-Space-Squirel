@@ -60,6 +60,9 @@ public class PlayerStatus
     public bool isWall;
     [Tooltip("Indicates if Player can Fly.")]
     public bool fly;
+    // action
+    [Tooltip("Keys")]
+    public int keys=0;
     
 }
 [System.Serializable]
@@ -180,7 +183,7 @@ public class PlayerController : MonoBehaviour, ICombatController
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            action(testeBool);
+            Action();
         }
 
         // crouch
@@ -215,12 +218,32 @@ public class PlayerController : MonoBehaviour, ICombatController
             return;
         }
     }
-    void action(bool grabOn)
+    void Action()
+    {
+        Grab(testeBool);
+        //UseKey();
+
+    }
+    void Grab(bool activeAction)
     {
         cacheMove.grabPoint.connectedBody = sI.WeaponScriptM.GrabPoint();
-        
-        cacheMove.grabPoint.enabled = grabOn;
+        cacheMove.grabPoint.enabled = activeAction;
         testeBool = !testeBool;
+    }
+    public void GetKey(int key)
+    {
+        playerStatus.keys += key;
+    }
+    public bool UseKey()
+    {
+        if (playerStatus.keys > 0)
+        {
+            playerStatus.keys -= 1;
+            return true;
+        }
+        else
+            return false;
+
     }
     void GetAxis()
     {
@@ -325,8 +348,15 @@ public class PlayerController : MonoBehaviour, ICombatController
     }
     private void OnCollisionStay2D(Collision2D coll)
     {
-        //if (coll.gameObject.name.Equals("Ground"))
-
+        
+    }
+    private void OnTriggerStay2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag.Equals("Portal") && Input.GetKeyDown(KeyCode.E))
+        {
+            print("Portal interaction ENABLE");
+            coll.gameObject.GetComponent<PortalScript>().teste = UseKey();
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {

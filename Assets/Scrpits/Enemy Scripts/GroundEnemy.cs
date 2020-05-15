@@ -11,6 +11,7 @@ public class EnemyGround
     public bool Hunt = false;
     public float health=100;
     public float dmg=10;
+    public GameObject keyDrop;
 }
 [System.Serializable]
 public class CacheEnemyGround
@@ -103,6 +104,7 @@ public class GroundEnemy : MonoBehaviour, ICombatController
             sI.healthBar.SetBarValue(enemy.health);
             if (enemy.health <= 0)
             {
+                Instantiate(enemy.keyDrop, transform.position, transform.rotation);
                 Destroy(gameObject);
             }
         }
