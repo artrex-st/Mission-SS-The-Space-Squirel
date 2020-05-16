@@ -39,6 +39,10 @@ public class UiBar : MonoBehaviour
         textValue.text = displayName +": "+ Mathf.Round(setValue).ToString("F2");
 
     }
+    public void SetText(string text)
+    {
+        textValue.text = text;
+    }
     public void GetAnimationOn(bool lowFuel)
     {
         //effectUi.SetActive(lowFuel);

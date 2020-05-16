@@ -89,6 +89,8 @@ public class ScriptsImport
     public UiBar fuelBar;
     [Tooltip("Rocket Light effect.")]
     public UnityEngine.Experimental.Rendering.Universal.Light2D lightEffectRocket;
+    [Tooltip("Script to display how much keys is have")]
+    public UiBar UiKey;
 }
 
 public class PlayerController : MonoBehaviour, ICombatController
@@ -119,6 +121,7 @@ public class PlayerController : MonoBehaviour, ICombatController
 
         sI.healthBar = GameObject.Find("UI/HealtPlayerBar").GetComponent<UiBar>();
         sI.fuelBar = GameObject.Find("UI/FuelBar").GetComponent<UiBar>();
+        sI.UiKey = GameObject.Find("UI/UiKey").GetComponent<UiBar>();
         sI.lightEffectRocket = GetComponentInChildren<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         sI.lightEffectRocket.intensity=0;
 
@@ -131,6 +134,7 @@ public class PlayerController : MonoBehaviour, ICombatController
         playerStatus.currHP = playerStatus.maxHP;
         sI.fuelBar.SetMaxBarValue(playerStatus.maxFuel);
         sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
+        sI.UiKey.SetText("Chaves:" + playerStatus.keys);
     }
     
     void FixedUpdate()
@@ -233,12 +237,14 @@ public class PlayerController : MonoBehaviour, ICombatController
     public void GetKey(int key)
     {
         playerStatus.keys += key;
+        sI.UiKey.SetText("Chaves:"+playerStatus.keys);
     }
     public bool UseKey()
     {
         if (playerStatus.keys > 0)
         {
             playerStatus.keys -= 1;
+            sI.UiKey.SetText("Chaves:" + playerStatus.keys);
             return true;
         }
         else

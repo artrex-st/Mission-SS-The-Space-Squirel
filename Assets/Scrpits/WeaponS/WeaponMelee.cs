@@ -8,8 +8,10 @@ public class WeaponMelee : MonoBehaviour
     [Range(0.0f, 10.0f)]
     public float meleeRange = 3;
     public LayerMask enemyLayer, grabLayer;
+    public float dmg;
     private void Start()
     {
+        dmg = GameObject.Find("Player").GetComponent<PlayerController>().playerStatus.attack;
     }
     private void Update()
     {
@@ -21,7 +23,7 @@ public class WeaponMelee : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Melee Hit in:"+ enemy.name);
-            enemy.gameObject.GetComponent<ICombatController>().ApplyDmg(30);
+            enemy.gameObject.GetComponent<ICombatController>().ApplyDmg(dmg);
             if (enemy.gameObject.layer.Equals("Bullet") || enemy.gameObject.layer.Equals(12))
             {
                 enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(enemy.GetComponent<Rigidbody2D>().velocity.x *-0.8f, enemy.GetComponent<Rigidbody2D>().velocity.x * -1.1f),ForceMode2D.Impulse);

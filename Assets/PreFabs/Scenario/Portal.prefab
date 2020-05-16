@@ -38,7 +38,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102799470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -99,9 +99,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8422927735603994393}
   - component: {fileID: 8422927735603994394}
+  - component: {fileID: 1973778298}
+  - component: {fileID: 1973778295}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +143,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7246556918bfef248a6a0a3c029610da, type: 2}
+  - {fileID: 2100000, guid: 6fb426d5216209044a68fa60333677ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: -1958659325
   m_SortingLayer: 1
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 6d6530bc158780b4ba1e40732e02cc89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20c0a08617b5d38448c837dd54eeb84a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -173,6 +175,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1973778298
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422927735603994388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09107208, y: -0.026020288}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.5, y: 3.5}
+    newSize: {x: 2.5, y: 3.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0576515, y: 3.161734}
+  m_EdgeRadius: 0
+--- !u!114 &1973778295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422927735603994388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad0870a299df124689fe3356493cb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialPortal: {fileID: 0}
+  chieldPortal: {fileID: 0}
+  portalOutLine: 0
+  namePortal: 
+  colorOutLineShield: {r: 4, g: 0, b: 2.101961, a: 0}
+  teste: 0
 --- !u!1 &8422927737020555787
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +311,7 @@ GameObject:
   - component: {fileID: 8422927737152361638}
   - component: {fileID: 8422927737152361637}
   m_Layer: 0
-  m_Name: ArcoPortal
+  m_Name: PortalActive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +349,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 7246556918bfef248a6a0a3c029610da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -324,7 +370,7 @@ SpriteRenderer:
   m_SortingLayerID: -1958659325
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 20c0a08617b5d38448c837dd54eeb84a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d6530bc158780b4ba1e40732e02cc89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

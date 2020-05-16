@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
-public class BulletEnemy : MonoBehaviour
+public class BulletEnemy : MonoBehaviour, ICombatController
 {
     public float speed = 20f, Dmg = 5f;
     public Rigidbody2D BulletBody;
@@ -28,5 +28,12 @@ public class BulletEnemy : MonoBehaviour
         if (coll.gameObject.tag == "Player")
             coll.gameObject.GetComponent<ICombatController>().ApplyDmg(Dmg);
         Destroy(gameObject, 0.1f);
+    }
+    public void ApplyDmg(float dmg) //deflect effect
+    {
+        BulletBody.AddForce(new Vector2((transform.right.x * speed)*-3, dmg), ForceMode2D.Impulse);
+        Destroy(gameObject,2f);
+        StartSelfDestruction = true;
+
     }
 }

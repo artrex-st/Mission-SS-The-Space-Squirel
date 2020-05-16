@@ -9,6 +9,7 @@ TagManager:
   - Ui
   - Key
   - Portal
+  - BulletDeflectable
   layers:
   - Default
   - TransparentFX
