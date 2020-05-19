@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Rendering.LWRP;
+using System.Data;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -104,7 +105,7 @@ public class PlayerController : MonoBehaviour, ICombatController
     [Range(-2f, 10f)]
     public float cooldown;
     private GameObject testeSword;
-    public bool testeBool;
+    public bool GrabActive;
 
     // ##### Bases ##### //
     private void Awake()
@@ -152,8 +153,13 @@ public class PlayerController : MonoBehaviour, ICombatController
             playerStatus.canMove = false;
         //
         GetAxis();
-        if (playerStatus.canMove || playerStatus.fly)
+        if (playerStatus.canMove || playerStatus.fly && GrabActive)
             cacheMove.rb.velocity = new Vector2(playerStatus.moveTo, cacheMove.rb.velocity.y);
+        else
+            if (!GrabActive)
+            {
+                cacheMove.rb.AddForce(new Vector2(playerStatus.moveTo*3, cacheMove.rb.velocity.y));
+            }
 
         //flip Sprite
         if (cacheMove.rb.velocity.x < 0)
@@ -171,7 +177,7 @@ public class PlayerController : MonoBehaviour, ICombatController
         {
             RocketEffectLearp(false);
         }
-        if (Input.GetButton("Jump") && playerStatus.fly && !fIsGround())
+        if (Input.GetButton("Jump") && playerStatus.fly && !fIsGround() && GrabActive)
         {
             Fly();
         }
@@ -224,15 +230,20 @@ public class PlayerController : MonoBehaviour, ICombatController
     }
     void Action()
     {
-        Grab(testeBool);
+        Grab(GrabActive);
         //UseKey();
 
     }
     void Grab(bool activeAction)
     {
         cacheMove.grabPoint.connectedBody = sI.WeaponScriptM.GrabPoint();
+        if (cacheMove.grabPoint.connectedBody==null)
+        {
+            GrabActive = false;
+            cacheMove.grabPoint.enabled = activeAction;
+        }
         cacheMove.grabPoint.enabled = activeAction;
-        testeBool = !testeBool;
+        GrabActive = !GrabActive;
     }
     public void GetKey(int key)
     {

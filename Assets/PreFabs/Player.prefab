@@ -227,8 +227,8 @@ GameObject:
   - component: {fileID: 9195138785408581349}
   - component: {fileID: 9195138785408581354}
   - component: {fileID: 9195138785408581355}
+  - component: {fileID: 641067557}
   - component: {fileID: 1385859194}
-  - component: {fileID: 1385859195}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -276,7 +276,7 @@ MonoBehaviour:
     fuel: 100
     fuelCost: 0
     flyForce: 6
-    attack: 100
+    attack: 10
     defence: 10
     resist: 10
     breath: 10
@@ -345,8 +345,7 @@ SpriteRenderer:
   m_SortingLayerID: -622138933
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1400086497183320551, guid: e85a8b33dd2e0a7489d3c9e04b37a8b4,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70d9c9d2ecfe3874ebabacaafab1ad4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -370,18 +369,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21093437, y: -0.16991973}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.2333333, y: 2.48}
+    oldSize: {x: 2.55, y: 2.025}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6718798, y: 1.3398395}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &9195138785408581355
 Rigidbody2D:
@@ -404,6 +403,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &641067557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195138785408581352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 23dfefe600000000033b418bcbe9eada0d313ff7
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -1482
 --- !u!235 &1385859194
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -428,25 +453,6 @@ WheelJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
---- !u!95 &1385859195
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9195138785408581352}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7b50f71e8f6b17f4092a2f4b0c0523d3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9195138785631881008
 GameObject:
   m_ObjectHideFlags: 0
