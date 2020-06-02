@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms;
 using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Rendering.LWRP;
 using System.Data;
+using Unity.Mathematics;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -112,7 +113,7 @@ public class PlayerController : MonoBehaviour, ICombatController
     {
         cacheMove.rb = GetComponent<Rigidbody2D>();
         cacheMove.bc = GetComponent<BoxCollider2D>();
-        cacheMove.animator = GetComponentInChildren<Animator>();
+        cacheMove.animator = GetComponent<Animator>();
 
         cacheMove.grabPoint = GetComponent<WheelJoint2D>();
 
@@ -136,6 +137,8 @@ public class PlayerController : MonoBehaviour, ICombatController
         sI.fuelBar.SetMaxBarValue(playerStatus.maxFuel);
         sI.fuelBar.SetBarValue(playerStatus.fuel,"Current Fuel");
         sI.UiKey.SetText("Chaves:" + playerStatus.keys);
+        Crouch(true);
+        Crouch(false);
     }
     
     void FixedUpdate()
@@ -143,6 +146,7 @@ public class PlayerController : MonoBehaviour, ICombatController
         WeaponSprite();
         if (playerStatus.WeaponCooldown < 5f)
             playerStatus.WeaponCooldown += Time.deltaTime;
+
         if (fIsGround())
         {
             playerStatus.canMove = true;
@@ -160,7 +164,7 @@ public class PlayerController : MonoBehaviour, ICombatController
             {
                 cacheMove.rb.AddForce(new Vector2(playerStatus.moveTo*3, cacheMove.rb.velocity.y));
             }
-
+        cacheMove.animator.SetFloat("Speed", math.abs(cacheMove.rb.velocity.x));
         //flip Sprite
         if (cacheMove.rb.velocity.x < 0)
             transform.rotation = new Quaternion(0, 180, 0, 0);//SpritePlayer.flipX = true;
@@ -216,13 +220,15 @@ public class PlayerController : MonoBehaviour, ICombatController
     {
         if (WeaponSwith.SelectedWeapon == 0) // weapon selected
         {
+            cacheMove.animator.SetTrigger("RangeAttack1");
             sI.WeaponScriptR.Shoot();
             playerStatus.WeaponCooldown = 0.5f;
             return;
         }
         if (WeaponSwith.SelectedWeapon == 1) // weapon selected
         {
-            cacheMove.animator.SetTrigger("Attack");
+            cacheMove.animator.SetTrigger("Attack2");
+            print("Melee");
             sI.WeaponScriptM.MeleeAttack();
             playerStatus.WeaponCooldown = 0.7f;
             return;
@@ -298,10 +304,10 @@ public class PlayerController : MonoBehaviour, ICombatController
     }
     void WeaponSprite()
     {
-        if (WeaponSwith.SelectedWeapon==1)
-            testeSword.SetActive(true);
-        else
-            testeSword.SetActive(false);
+        //if (WeaponSwith.SelectedWeapon==1)
+        //    testeSword.SetActive(true);
+        //else
+        //    testeSword.SetActive(false);
     }
     void Crouch(bool isCouch)
     {
@@ -386,9 +392,9 @@ public class PlayerController : MonoBehaviour, ICombatController
     {
         if (playerStatus.isCrouch)
         {
-            return Physics2D.OverlapBox(new Vector2(cacheMove.bc.transform.position.x, cacheMove.bc.transform.position.y- (cacheMove.bc.size.y / 2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f), 0, cacheMove.layerOfGround, 0, 0.1f);
+            return Physics2D.OverlapBox(new Vector2(cacheMove.bc.transform.position.x, cacheMove.bc.transform.position.y- (cacheMove.bc.size.y / 2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.1f), 0, cacheMove.layerOfGround, 0, 0.1f);
         }else
-            return Physics2D.OverlapBox(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y*1.01f), 0, cacheMove.layerOfGround, 0, 0.1f);
+            return Physics2D.OverlapBox(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y*1.1f), 0, cacheMove.layerOfGround, 0, 0.1f);
         //return Physics2D.BoxCast(new Vector2(transform.localPosition.x, transform.localPosition.y), new Vector2(BodySize.size.x * 0.4f, BodySize.size.y * 0.9f), 0, Vector2.down, 0.1f, GroundLayer);
     }
     // ##### end Functions ##### //
@@ -399,10 +405,10 @@ public class PlayerController : MonoBehaviour, ICombatController
         Gizmos.color = Color.blue;
         if (playerStatus.isCrouch)
         {
-            Gizmos.DrawWireCube(new Vector2(cacheMove.bc.transform.position.x,cacheMove.bc.transform.position.y - (cacheMove.bc.size.y/2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f));
+            Gizmos.DrawWireCube(new Vector2(cacheMove.bc.transform.position.x,cacheMove.bc.transform.position.y - (cacheMove.bc.size.y/2)), new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.1f));
         }
         else
-            Gizmos.DrawWireCube(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.01f));
+            Gizmos.DrawWireCube(cacheMove.bc.transform.position, new Vector2(cacheMove.bc.size.x * 0.9f, cacheMove.bc.size.y * 1.1f));
 
     }
 }

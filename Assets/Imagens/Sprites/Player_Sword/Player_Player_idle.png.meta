@@ -1,0 +1,1123 @@
+fileFormatVersion: 2
+guid: e19488d6ffb87ba43a0ebb71ff27332a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5559914161444826870
+    second: Player_Player_idle_0
+  - first:
+      213: -6700801640817346414
+    second: Player_Player_idle_1
+  - first:
+      213: -6287292715465346994
+    second: Player_Player_idle_2
+  - first:
+      213: -370711553903029713
+    second: Player_Player_idle_3
+  - first:
+      213: 5474189506380231201
+    second: Player_Player_idle_4
+  - first:
+      213: 95566354496196346
+    second: Player_Player_idle_5
+  - first:
+      213: -7215571253688141719
+    second: Player_Player_idle_6
+  - first:
+      213: -2935679744928200079
+    second: Player_Player_idle_7
+  - first:
+      213: -7050436487446621283
+    second: Player_Player_idle_8
+  - first:
+      213: -4634640582058626672
+    second: Player_Player_idle_9
+  - first:
+      213: 6643970627997988935
+    second: Player_Player_idle_10
+  - first:
+      213: 1801115399713327561
+    second: Player_Player_idle_11
+  - first:
+      213: -7442045578296489757
+    second: Player_Player_idle_12
+  - first:
+      213: 2094542399815320501
+    second: Player_Player_idle_13
+  - first:
+      213: 6497605026288768760
+    second: Player_Player_idle_14
+  - first:
+      213: 5398078611645982211
+    second: Player_Player_idle_15
+  - first:
+      213: 8568725615992812568
+    second: Player_Player_idle_0
+  - first:
+      213: 1736382840102356058
+    second: Player_Player_idle_1
+  - first:
+      213: 3366945053638543841
+    second: Player_Player_idle_2
+  - first:
+      213: 6108077357127747767
+    second: Player_Player_idle_3
+  - first:
+      213: -4300644955963180575
+    second: Player_Player_idle_4
+  - first:
+      213: -5636466603724296328
+    second: Player_Player_idle_5
+  - first:
+      213: -8116415648816359941
+    second: Player_Player_idle_6
+  - first:
+      213: 347236541636066526
+    second: Player_Player_idle_7
+  - first:
+      213: -7915012010142551695
+    second: Player_Player_idle_8
+  - first:
+      213: -2027785379242740329
+    second: Player_Player_idle_9
+  - first:
+      213: 70375986429801319
+    second: Player_Player_idle_10
+  - first:
+      213: -6948017952176965615
+    second: Player_Player_idle_11
+  - first:
+      213: 6893950685580079186
+    second: Player_Player_idle_12
+  - first:
+      213: -4096331929680984544
+    second: Player_Player_idle_13
+  - first:
+      213: -5524410448877167000
+    second: Player_Player_idle_14
+  - first:
+      213: -7118219763336116654
+    second: Player_Player_idle_15
+  - first:
+      213: -5204216994959018781
+    second: Player_Player_idle_16
+  - first:
+      213: 9205467337222229814
+    second: Player_Player_idle_17
+  - first:
+      213: 8535765868523620893
+    second: Player_Player_idle_18
+  - first:
+      213: -79312280895947542
+    second: Player_Player_idle_19
+  - first:
+      213: -1368310991999761124
+    second: Player_Player_idle_20
+  - first:
+      213: 748548625228137976
+    second: Player_Player_idle_21
+  - first:
+      213: 5677279643137697522
+    second: Player_Player_idle_22
+  - first:
+      213: 5044083357074386401
+    second: Player_Player_idle_23
+  - first:
+      213: 2315362242924452170
+    second: Player_Player_idle_24
+  - first:
+      213: -1315579241698715626
+    second: Player_Player_idle_25
+  - first:
+      213: 7855801974482385184
+    second: Player_Player_idle_26
+  - first:
+      213: -7048155716024422888
+    second: Player_Player_idle_27
+  - first:
+      213: 7923882328373143891
+    second: Player_Player_idle_28
+  - first:
+      213: -3917669620933711583
+    second: Player_Player_idle_29
+  - first:
+      213: 2445277557015173923
+    second: Player_Player_idle_30
+  - first:
+      213: -1331136004328916669
+    second: Player_Player_idle_31
+  - first:
+      213: 1436838682165506041
+    second: Player_Player_idle_32
+  - first:
+      213: -8038453306689505939
+    second: Player_Player_idle_33
+  - first:
+      213: 7871056042824493440
+    second: Player_Player_idle_34
+  - first:
+      213: 3054069244193187316
+    second: Player_Player_idle_35
+  - first:
+      213: 4187291632820192154
+    second: Player_Player_idle_36
+  - first:
+      213: -6054943294159738070
+    second: Player_Player_idle_37
+  - first:
+      213: 1003121357487728600
+    second: Player_Player_idle_38
+  - first:
+      213: 6636353462098865291
+    second: Player_Player_idle_39
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_Player_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814ba077c8a3ae670800000000000000
+      internalID: 8568725615992812568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54826a4efed81810800000000000000
+      internalID: 1736382840102356058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9426cffaac9be20800000000000000
+      internalID: 3366945053638543841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8c43c8eff34c450800000000000000
+      internalID: 6108077357127747767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_4
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e93db6c23a0154c0800000000000000
+      internalID: -4300644955963180575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_5
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f29a8bc7f37c1b0800000000000000
+      internalID: -5636466603724296328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_6
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf511e258f2bc5f80800000000000000
+      internalID: -8116415648816359941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_7
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcb04d7bc1a1d400800000000000000
+      internalID: 347236541636066526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_8
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171b086238a382290800000000000000
+      internalID: -7915012010142551695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_9
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7957185f0fbdbd3e0800000000000000
+      internalID: -2027785379242740329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_10
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763bdd736960af000800000000000000
+      internalID: 70375986429801319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_11
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11874731c7ea39f90800000000000000
+      internalID: -6948017952176965615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_12
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250bf017f9b3caf50800000000000000
+      internalID: 6893950685580079186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_13
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026464130d7e627c0800000000000000
+      internalID: -4096331929680984544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_14
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e583167f95553b0800000000000000
+      internalID: -5524410448877167000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_15
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 476
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2568f25d6d0073d90800000000000000
+      internalID: -7118219763336116654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4ba695738e6c7b0800000000000000
+      internalID: -5204216994959018781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_17
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f879245c360cf70800000000000000
+      internalID: 9205467337222229814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_18
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a014f35d1257670800000000000000
+      internalID: 8535765868523620893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_19
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecfed696e936eef0800000000000000
+      internalID: -79312280895947542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_20
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1587930768c20de0800000000000000
+      internalID: -1368310991999761124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_21
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f584d73201636a00800000000000000
+      internalID: 748548625228137976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_22
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f667c381cfb9ce40800000000000000
+      internalID: 5677279643137697522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_23
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ede0eba61f200640800000000000000
+      internalID: 5044083357074386401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_24
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a491ddf41b1d12020800000000000000
+      internalID: 2315362242924452170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_25
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6189ba066af1ebde0800000000000000
+      internalID: -1315579241698715626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_26
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029b5d2264a650d60800000000000000
+      internalID: 7855801974482385184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_27
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ea9b018bbef2e90800000000000000
+      internalID: -7048155716024422888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_28
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3592da0cef847fd60800000000000000
+      internalID: 7923882328373143891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_29
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12928e88c34a1a9c0800000000000000
+      internalID: -3917669620933711583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_30
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bdf138bfe5fe120800000000000000
+      internalID: 2445277557015173923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_31
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 238
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349fd325bdad68de0800000000000000
+      internalID: -1331136004328916669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffe3023b2da0f310800000000000000
+      internalID: 1436838682165506041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_33
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65353f9e4da17090800000000000000
+      internalID: -8038453306689505939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_34
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089eebfa4cb9b3d60800000000000000
+      internalID: 7871056042824493440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_35
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5a493ebcb326a20800000000000000
+      internalID: 3054069244193187316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_36
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9386390e8f3c1a30800000000000000
+      internalID: 4187291632820192154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_37
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ba978872588fba0800000000000000
+      internalID: -6054943294159738070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_38
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7e9a35f8dcbed00800000000000000
+      internalID: 1003121357487728600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_idle_39
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 0
+        width: 197
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c26581050191c50800000000000000
+      internalID: 6636353462098865291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

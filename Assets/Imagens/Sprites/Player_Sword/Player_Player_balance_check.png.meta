@@ -1,0 +1,883 @@
+fileFormatVersion: 2
+guid: 51ec180821503894d84784c538c6b2df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9157320623133459143
+    second: Player_Player_balance_check_0
+  - first:
+      213: 4576118857452626115
+    second: Player_Player_balance_check_1
+  - first:
+      213: -7023934022366997407
+    second: Player_Player_balance_check_2
+  - first:
+      213: -5951432345416432799
+    second: Player_Player_balance_check_3
+  - first:
+      213: -7260377355806552239
+    second: Player_Player_balance_check_4
+  - first:
+      213: -4620294137490816891
+    second: Player_Player_balance_check_5
+  - first:
+      213: 5831924166954302525
+    second: Player_Player_balance_check_6
+  - first:
+      213: 3428830089611165438
+    second: Player_Player_balance_check_7
+  - first:
+      213: 7355677385783277728
+    second: Player_Player_balance_check_8
+  - first:
+      213: 8640852498384805780
+    second: Player_Player_balance_check_9
+  - first:
+      213: 6548860194310399178
+    second: Player_Player_balance_check_10
+  - first:
+      213: 3413882132937785026
+    second: Player_Player_balance_check_11
+  - first:
+      213: 1354259717730198214
+    second: Player_Player_balance_check_12
+  - first:
+      213: 4253709217393498094
+    second: Player_Player_balance_check_13
+  - first:
+      213: 8920415580323287055
+    second: Player_Player_balance_check_14
+  - first:
+      213: -2491547236956720801
+    second: Player_Player_balance_check_15
+  - first:
+      213: -2542186394411532981
+    second: Player_Player_balance_check_16
+  - first:
+      213: 1567387858043155536
+    second: Player_Player_balance_check_17
+  - first:
+      213: 2302817142428274665
+    second: Player_Player_balance_check_18
+  - first:
+      213: -1304052549438303201
+    second: Player_Player_balance_check_19
+  - first:
+      213: -6803463506704431182
+    second: Player_Player_balance_check_20
+  - first:
+      213: 1320357467464548330
+    second: Player_Player_balance_check_21
+  - first:
+      213: -1722861841211258167
+    second: Player_Player_balance_check_22
+  - first:
+      213: 3607228193623660130
+    second: Player_Player_balance_check_23
+  - first:
+      213: -3241790407861427104
+    second: Player_Player_balance_check_24
+  - first:
+      213: -7845270723584527269
+    second: Player_Player_balance_check_25
+  - first:
+      213: 2743837457578059565
+    second: Player_Player_balance_check_26
+  - first:
+      213: 3448932140791708703
+    second: Player_Player_balance_check_27
+  - first:
+      213: 106716679435199313
+    second: Player_Player_balance_check_28
+  - first:
+      213: 2215812772132166847
+    second: Player_Player_balance_check_29
+  - first:
+      213: -4297349078641945658
+    second: Player_Player_balance_check_30
+  - first:
+      213: 1809768645248788216
+    second: Player_Player_balance_check_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_Player_balance_check_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d75cb2969aae080800000000000000
+      internalID: -9157320623133459143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c02e640bd3a18f30800000000000000
+      internalID: 4576118857452626115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_2
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164d8079839f58e90800000000000000
+      internalID: -7023934022366997407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_3
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1630faa50d3486da0800000000000000
+      internalID: -5951432345416432799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_4
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f4cd31345fd3b90800000000000000
+      internalID: -7260377355806552239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_5
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5804a0916fa61efb0800000000000000
+      internalID: -4620294137490816891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_6
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cb35881282fe050800000000000000
+      internalID: 5831924166954302525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_7
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeb17ebcc6a59f20800000000000000
+      internalID: 3428830089611165438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_8
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a87cfd3c9d941660800000000000000
+      internalID: 7355677385783277728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_9
+      rect:
+        serializedVersion: 2
+        x: 2475
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fd5cae0997ae770800000000000000
+      internalID: 8640852498384805780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_10
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4219d36a932ea50800000000000000
+      internalID: 6548860194310399178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_11
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce3fce56bb806f20800000000000000
+      internalID: 3413882132937785026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_12
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2ede0c90c4bc210800000000000000
+      internalID: 1354259717730198214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_13
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee75b800ff5380b30800000000000000
+      internalID: 4253709217393498094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_14
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00970a35beabcb70800000000000000
+      internalID: 8920415580323287055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_15
+      rect:
+        serializedVersion: 2
+        x: 4125
+        y: 344
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51b6102dfe3c6dd0800000000000000
+      internalID: -2491547236956720801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4df44081f658bcd0800000000000000
+      internalID: -2542186394411532981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_17
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0543ce7d3fa70c510800000000000000
+      internalID: 1567387858043155536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_18
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef0e1d7dff35ff10800000000000000
+      internalID: 2302817142428274665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_19
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14994e8d1317ede0800000000000000
+      internalID: -1304052549438303201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_20
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b78c88acfd3591a0800000000000000
+      internalID: -6803463506704431182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_21
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef32c00f1ad25210800000000000000
+      internalID: 1320357467464548330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_22
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca0785984a2718e0800000000000000
+      internalID: -1722861841211258167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_23
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26656b02ee27f0230800000000000000
+      internalID: 3607228193623660130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_24
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064a62fbcc8d203d0800000000000000
+      internalID: -3241790407861427104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_25
+      rect:
+        serializedVersion: 2
+        x: 2475
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54f8f9c7dfff1390800000000000000
+      internalID: -7845270723584527269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_26
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27e95451a1141620800000000000000
+      internalID: 2743837457578059565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_27
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c315242811ddf20800000000000000
+      internalID: 3448932140791708703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_28
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153285921422b7100800000000000000
+      internalID: 106716679435199313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_29
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc16b3f9f520ce10800000000000000
+      internalID: 2215812772132166847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_30
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3d1b308cfbc54c0800000000000000
+      internalID: -4297349078641945658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Player_balance_check_31
+      rect:
+        serializedVersion: 2
+        x: 4125
+        y: 0
+        width: 275
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6a1b98ef69d1910800000000000000
+      internalID: 1809768645248788216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
