@@ -174,16 +174,19 @@ public class PlayerController : MonoBehaviour, ICombatController
     }
     private void Update()
     {
+        cacheMove.animator.SetBool("isGrounded", fIsGround());
         //jump / fly
         if (Input.GetButtonDown("Jump") && fIsGround())
             Jump();
         if (Input.GetButtonUp("Jump"))
         {
             RocketEffectLearp(false);
+            cacheMove.animator.SetBool("Fly",false);
         }
         if (Input.GetButton("Jump") && playerStatus.fly && !fIsGround() && GrabActive)
         {
             Fly();
+            cacheMove.animator.SetBool("Fly", true);
         }
         else if (Input.GetButton("Jump") && playerStatus.fuel <= 0)
         {
@@ -228,7 +231,7 @@ public class PlayerController : MonoBehaviour, ICombatController
         if (WeaponSwith.SelectedWeapon == 1) // weapon selected
         {
             cacheMove.animator.SetTrigger("Attack2");
-            print("Melee");
+            //print("Melee");
             sI.WeaponScriptM.MeleeAttack();
             playerStatus.WeaponCooldown = 0.7f;
             return;
@@ -274,22 +277,28 @@ public class PlayerController : MonoBehaviour, ICombatController
     }
     void Jump()
     {
+        cacheMove.animator.SetTrigger("Jump");
         if (!fIsGround() && playerStatus.fuel <= 0)
         {
             playerStatus.fly = false;
             RocketEffectLearp(false);
+
         }
         cacheMove.rb.AddForce(new Vector2(0, playerStatus.jumpForce * 10), ForceMode2D.Impulse);
     }
     void Fly()
     {
+        cacheMove.animator.SetTrigger("Jump");
         if (!fIsGround() && playerStatus.fuel <= 0)
         {
+
             playerStatus.fly = false;
             RocketEffectLearp(false);
+            cacheMove.animator.SetBool("Fly", false);
         }
         else
         {
+            cacheMove.animator.SetBool("Fly", true);
             cacheMove.rb.AddForce(new Vector2(0, playerStatus.flyForce * 25), ForceMode2D.Force);
             playerStatus.fuel -= playerStatus.fuelCost * Time.deltaTime;
             RocketEffectLearp(true);
